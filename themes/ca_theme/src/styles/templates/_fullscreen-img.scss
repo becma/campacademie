@@ -1,0 +1,10 @@
+.fullscreen-img {
+    &-content {
+        max-width: 2000px;
+
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+}

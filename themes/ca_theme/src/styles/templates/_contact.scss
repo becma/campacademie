@@ -1,0 +1,86 @@
+.contact {
+    &-content {
+        padding: 50px;
+        
+        form {
+            width: 80%;
+            max-width: 800px;
+            margin: 60px auto 0;
+
+            label {
+                color: black;
+                font-size: 2rem !important;
+            }
+
+            input {
+                max-width: none !important;
+            }
+
+            input, textarea {
+                border: 1px solid black !important;
+                width: 100%;
+                padding: 10px;
+
+                &:focus {
+                    background-color: #{$mauve-ca + '22'} !important;
+                    border-color: $mauve-ca !important;
+                    outline: none;
+                }
+            }
+
+            textarea {
+                height: 150px;
+            }
+
+            .cta.green {
+                background-color: $vert-ca !important;
+                border: none;
+                color: black !important;
+                display: block;
+                font-size: 3rem !important;
+                max-width: 700px;
+                padding: 15px !important;
+                margin: 30px auto;
+                width: 60%;
+
+                &:hover, &:focus {
+                    background-color: $mauve-ca !important;
+                    color: white !important;
+                }
+            }
+        }
+
+        .wpforms-field-container {
+            @media #{$medium-plus} {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+        
+        .input-half {
+            width: 100% !important;
+
+            @media #{$medium-plus} {
+                flex-grow: 1;
+                width: 45% !important;
+
+                &:nth-child(2) {
+                    margin-left: 15px !important;
+                }
+            }
+        }
+
+        .input-fullwidth {
+            flex-grow: 1;
+            margin: 20px 0;
+        }
+
+
+        .wpforms-confirmation-container-full {
+            border: 1px solid $mauve-ca !important;
+            background-color: #{$mauve-ca + '22'} !important;
+            margin: 50px;
+        }
+
+    }
+}

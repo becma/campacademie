@@ -1,0 +1,354 @@
+{
+  "translations": {
+    "es_UY": "155892d54ef17d29c56830c4f5ee6ca4",
+    "es_VE": "401fcaa4aa62af03609b6be1f5556579",
+    "fr_FR": "4c2b9c9970301cdfe3e5dc5b0fbb52fa",
+    "hu_HU": "87c5f6703c64de59a2c6937154e37966",
+    "nl_NL_formal": "e0249345fab4ab5b81871e40f9ae1698",
+    "sk_SK": "196e3eb0a1bcbcab561c2bcc731fb2c5",
+    "es_GT": "c362f121d06f9165fc9cf2542c3cb279",
+    "es_MX": "7301dbf1f55cd84fc62b1a0054777c9e",
+    "tr_TR": "4ca5517928d7e6c7c9a2df734bc66af0",
+    "zh_CN": "a730f9b68ada56eb2b74a4aa7ed49f56",
+    "fi": "5be311ed6af8208db8d5ba2501c448c4",
+    "es_PE": "152023ca528721e10a7207753e7f3827",
+    "fr_CA": "116e4bf6c57d706fd7d0a2eb99d110f5",
+    "nb_NO": "27aecfe32c57b0781445e8e578144b48",
+    "pt_BR": "2842921464abd77733ffa739d7c9e306",
+    "sv_SE": "f7dd56656ef8a5734dbaceea56d4bb4b",
+    "es_CO": "e70ede8581e7c641d22f0cfb6387080b",
+    "es_ES": "aab3c1e8496ce31d1a46217d363c1206",
+    "es_CL": "e4737e1f3aae50ada6f8fe7701a3cf5c",
+    "hi_IN": "9ff3fa3672b6755139fdd5e92e8df299",
+    "de_CH": "b33897d47e6b35870c7a41f97f23078d",
+    "de_CH_informal": "3c48b33f0fe6c4733925b422ebd73286",
+    "hr": "c2df9ab75ef52aad04ae46a5787a10e0",
+    "fr_BE": "c2f8e65daae2e8996cd64b83f8cf0f72",
+    "it_IT": "d2a088e092ba4f3a0047f886eafa87e0",
+    "ja": "907ea58cea9f66aa3b755f08130d6c25",
+    "pl_PL": "2d1dccebdccf667473e22c6854779a81",
+    "ru_RU": "8fcf0557a7e991b3745263a230e8b1d1",
+    "de_AT": "9ebba975aa9ada533439575c5023c3c9",
+    "es_AR": "87291a7a06e00cf8fb8e3b7b6ce88fcc",
+    "de_DE_formal": "538bacd98cafb7c1f0924c19249fecca",
+    "es_CR": "8f72a5fc04334e5c1b7c092509480e59",
+    "fa_IR": "c662a5957c64af5697d1d79902888aa7",
+    "nl_BE": "29c9e76ded648f6aab08225779fa7c3a",
+    "nl_NL": "0dbd9515c08e3035759836c9093ca3cf",
+    "da_DK": "629b6b2a03574074b13a1151fc290671",
+    "de_DE": "25a75a8f5de9df83b7f2fc2604a75fd4",
+    "pt_PT": "c80336b923846b085bc0e4ab08ce2f51",
+    "uk": "3c553d17c4d5e0b49f238c88f8553e1d"
+  },
+  "zipFiles": {
+    "da_DK": [
+      "real-media-library-da_DK-164153d8a466523469c70e75e903b00a.json",
+      "real-media-library-da_DK-79735bb54a669d95361e4bd368678050.json",
+      "real-media-library-da_DK.mo",
+      "real-media-library-da_DK.po"
+    ],
+    "de_AT": [
+      "real-media-library-de_AT-164153d8a466523469c70e75e903b00a.json",
+      "real-media-library-de_AT-79735bb54a669d95361e4bd368678050.json",
+      "real-product-manager-wp-client-de_AT-168726dbe96b3ce427e7fedce31bb0bc.json",
+      "real-utils-de_AT-61a60894c517b346c6b99608ccce350d.json",
+      "real-utils-de_AT-74ccc0603b454665ba4060550b4e9aa0.json",
+      "real-utils-de_AT-b3c66931a03e39a842384fb81443cb05.json",
+      "real-utils-de_AT-bd8f888d3790e3faf824d6fd69319a28.json",
+      "freemium-de_AT.po",
+      "real-media-library-de_AT.mo",
+      "real-media-library-de_AT.po",
+      "real-product-manager-wp-client-de_AT.mo",
+      "real-product-manager-wp-client-de_AT.po",
+      "real-utils-de_AT.mo",
+      "real-utils-de_AT.po",
+      "utils-de_AT.mo",
+      "utils-de_AT.po"
+    ],
+    "de_CH": [
+      "real-media-library-de_CH-164153d8a466523469c70e75e903b00a.json",
+      "real-media-library-de_CH-79735bb54a669d95361e4bd368678050.json",
+      "real-product-manager-wp-client-de_CH-168726dbe96b3ce427e7fedce31bb0bc.json",
+      "real-utils-de_CH-61a60894c517b346c6b99608ccce350d.json",
+      "real-utils-de_CH-74ccc0603b454665ba4060550b4e9aa0.json",
+      "real-utils-de_CH-b3c66931a03e39a842384fb81443cb05.json",
+      "real-utils-de_CH-bd8f888d3790e3faf824d6fd69319a28.json",
+      "freemium-de_CH.po",
+      "real-media-library-de_CH.mo",
+      "real-media-library-de_CH.po",
+      "real-product-manager-wp-client-de_CH.mo",
+      "real-product-manager-wp-client-de_CH.po",
+      "real-utils-de_CH.mo",
+      "real-utils-de_CH.po",
+      "utils-de_CH.mo",
+      "utils-de_CH.po"
+    ],
+    "de_CH_informal": [
+      "real-media-library-de_CH_informal-164153d8a466523469c70e75e903b00a.json",
+      "real-media-library-de_CH_informal-79735bb54a669d95361e4bd368678050.json",
+      "real-product-manager-wp-client-de_CH_informal-168726dbe96b3ce427e7fedce31bb0bc.json",
+      "real-utils-de_CH_informal-61a60894c517b346c6b99608ccce350d.json",
+      "real-utils-de_CH_informal-74ccc0603b454665ba4060550b4e9aa0.json",
+      "real-utils-de_CH_informal-b3c66931a03e39a842384fb81443cb05.json",
+      "real-utils-de_CH_informal-bd8f888d3790e3faf824d6fd69319a28.json",
+      "freemium-de_CH_informal.po",
+      "real-media-library-de_CH_informal.mo",
+      "real-media-library-de_CH_informal.po",
+      "real-product-manager-wp-client-de_CH_informal.mo",
+      "real-product-manager-wp-client-de_CH_informal.po",
+      "real-utils-de_CH_informal.mo",
+      "real-utils-de_CH_informal.po",
+      "utils-de_CH_informal.mo",
+      "utils-de_CH_informal.po"
+    ],
+    "de_DE": [
+      "real-media-library-de_DE-164153d8a466523469c70e75e903b00a.json",
+      "real-media-library-de_DE-79735bb54a669d95361e4bd368678050.json",
+      "real-product-manager-wp-client-de_DE-168726dbe96b3ce427e7fedce31bb0bc.json",
+      "real-utils-de_DE-61a60894c517b346c6b99608ccce350d.json",
+      "real-utils-de_DE-74ccc0603b454665ba4060550b4e9aa0.json",
+      "real-utils-de_DE-b3c66931a03e39a842384fb81443cb05.json",
+      "real-utils-de_DE-bd8f888d3790e3faf824d6fd69319a28.json",
+      "freemium-de_DE.po",
+      "real-media-library-de_DE.mo",
+      "real-media-library-de_DE.po",
+      "real-product-manager-wp-client-de_DE.mo",
+      "real-product-manager-wp-client-de_DE.po",
+      "real-utils-de_DE.mo",
+      "real-utils-de_DE.po",
+      "utils-de_DE.mo",
+      "utils-de_DE.po"
+    ],
+    "de_DE_formal": [
+      "real-media-library-de_DE_formal-164153d8a466523469c70e75e903b00a.json",
+      "real-media-library-de_DE_formal-79735bb54a669d95361e4bd368678050.json",
+      "real-product-manager-wp-client-de_DE_formal-168726dbe96b3ce427e7fedce31bb0bc.json",
+      "real-utils-de_DE_formal-61a60894c517b346c6b99608ccce350d.json",
+      "real-utils-de_DE_formal-74ccc0603b454665ba4060550b4e9aa0.json",
+      "real-utils-de_DE_formal-b3c66931a03e39a842384fb81443cb05.json",
+      "real-utils-de_DE_formal-bd8f888d3790e3faf824d6fd69319a28.json",
+      "freemium-de_DE_formal.po",
+      "real-media-library-de_DE_formal.mo",
+      "real-media-library-de_DE_formal.po",
+      "real-product-manager-wp-client-de_DE_formal.mo",
+      "real-product-manager-wp-client-de_DE_formal.po",
+      "real-utils-de_DE_formal.mo",
+      "real-utils-de_DE_formal.po",
+      "utils-de_DE_formal.mo",
+      "utils-de_DE_formal.po"
+    ],
+    "es_AR": [
+      "real-media-library-es_AR.mo",
+      "real-media-library-es_AR.po"
+    ],
+    "es_CL": [
+      "real-media-library-es_CL.mo",
+      "real-media-library-es_CL.po"
+    ],
+    "es_CO": [
+      "real-media-library-es_CO.mo",
+      "real-media-library-es_CO.po"
+    ],
+    "es_CR": [
+      "real-media-library-es_CR.mo",
+      "real-media-library-es_CR.po"
+    ],
+    "es_ES": [
+      "real-media-library-es_ES.mo",
+      "real-media-library-es_ES.po"
+    ],
+    "es_GT": [
+      "real-media-library-es_GT.mo",
+      "real-media-library-es_GT.po"
+    ],
+    "es_MX": [
+      "real-media-library-es_MX.mo",
+      "real-media-library-es_MX.po"
+    ],
+    "es_PE": [
+      "real-media-library-es_PE.mo",
+      "real-media-library-es_PE.po"
+    ],
+    "es_UY": [
+      "real-media-library-es_UY.mo",
+      "real-media-library-es_UY.po"
+    ],
+    "es_VE": [
+      "real-media-library-es_VE.mo",
+      "real-media-library-es_VE.po"
+    ],
+    "fa_IR": [
+      "real-media-library-fa_IR.mo",
+      "real-media-library-fa_IR.po"
+    ],
+    "fi": [
+      "real-media-library-fi-164153d8a466523469c70e75e903b00a.json",
+      "real-media-library-fi-79735bb54a669d95361e4bd368678050.json",
+      "real-product-manager-wp-client-fi-168726dbe96b3ce427e7fedce31bb0bc.json",
+      "real-utils-fi-61a60894c517b346c6b99608ccce350d.json",
+      "real-utils-fi-74ccc0603b454665ba4060550b4e9aa0.json",
+      "real-utils-fi-b3c66931a03e39a842384fb81443cb05.json",
+      "real-utils-fi-bd8f888d3790e3faf824d6fd69319a28.json",
+      "real-media-library-fi.mo",
+      "real-media-library-fi.po",
+      "real-product-manager-wp-client-fi.mo",
+      "real-product-manager-wp-client-fi.po",
+      "real-utils-fi.mo",
+      "real-utils-fi.po",
+      "utils-fi.mo",
+      "utils-fi.po"
+    ],
+    "fr_BE": [
+      "real-media-library-fr_BE.mo",
+      "real-media-library-fr_BE.po"
+    ],
+    "fr_CA": [
+      "real-media-library-fr_CA.mo",
+      "real-media-library-fr_CA.po"
+    ],
+    "fr_FR": [
+      "real-media-library-fr_FR.mo",
+      "real-media-library-fr_FR.po"
+    ],
+    "hi_IN": [
+      "real-media-library-hi_IN.mo",
+      "real-media-library-hi_IN.po"
+    ],
+    "hr": [
+      "real-media-library-hr.mo",
+      "real-media-library-hr.po"
+    ],
+    "hu_HU": [
+      "real-product-manager-wp-client-hu_HU-168726dbe96b3ce427e7fedce31bb0bc.json",
+      "real-media-library-hu_HU.mo",
+      "real-media-library-hu_HU.po",
+      "real-product-manager-wp-client-hu_HU.mo",
+      "real-product-manager-wp-client-hu_HU.po"
+    ],
+    "it_IT": [
+      "real-media-library-it_IT.mo",
+      "real-media-library-it_IT.po"
+    ],
+    "ja": [
+      "real-media-library-ja.mo",
+      "real-media-library-ja.po"
+    ],
+    "nb_NO": [
+      "real-media-library-nb_NO-164153d8a466523469c70e75e903b00a.json",
+      "real-media-library-nb_NO-79735bb54a669d95361e4bd368678050.json",
+      "real-product-manager-wp-client-nb_NO-168726dbe96b3ce427e7fedce31bb0bc.json",
+      "real-utils-nb_NO-61a60894c517b346c6b99608ccce350d.json",
+      "real-utils-nb_NO-74ccc0603b454665ba4060550b4e9aa0.json",
+      "real-utils-nb_NO-b3c66931a03e39a842384fb81443cb05.json",
+      "real-utils-nb_NO-bd8f888d3790e3faf824d6fd69319a28.json",
+      "real-media-library-nb_NO.mo",
+      "real-media-library-nb_NO.po",
+      "real-product-manager-wp-client-nb_NO.mo",
+      "real-product-manager-wp-client-nb_NO.po",
+      "real-utils-nb_NO.mo",
+      "real-utils-nb_NO.po",
+      "utils-nb_NO.mo",
+      "utils-nb_NO.po"
+    ],
+    "nl_BE": [
+      "real-media-library-nl_BE.mo",
+      "real-media-library-nl_BE.po"
+    ],
+    "nl_NL": [
+      "real-media-library-nl_NL.mo",
+      "real-media-library-nl_NL.po"
+    ],
+    "nl_NL_formal": [
+      "real-media-library-nl_NL_formal.mo",
+      "real-media-library-nl_NL_formal.po"
+    ],
+    "pl_PL": [
+      "real-media-library-pl_PL-164153d8a466523469c70e75e903b00a.json",
+      "real-media-library-pl_PL-79735bb54a669d95361e4bd368678050.json",
+      "real-media-library-pl_PL.mo",
+      "real-media-library-pl_PL.po"
+    ],
+    "pt_BR": [
+      "real-media-library-pt_BR-164153d8a466523469c70e75e903b00a.json",
+      "real-media-library-pt_BR-79735bb54a669d95361e4bd368678050.json",
+      "real-media-library-pt_BR.mo",
+      "real-media-library-pt_BR.po"
+    ],
+    "pt_PT": [
+      "real-media-library-pt_PT-164153d8a466523469c70e75e903b00a.json",
+      "real-media-library-pt_PT-79735bb54a669d95361e4bd368678050.json",
+      "real-media-library-pt_PT.mo",
+      "real-media-library-pt_PT.po"
+    ],
+    "ru_RU": [
+      "real-media-library-ru_RU-164153d8a466523469c70e75e903b00a.json",
+      "real-media-library-ru_RU-79735bb54a669d95361e4bd368678050.json",
+      "real-product-manager-wp-client-ru_RU-168726dbe96b3ce427e7fedce31bb0bc.json",
+      "real-utils-ru_RU-61a60894c517b346c6b99608ccce350d.json",
+      "real-utils-ru_RU-74ccc0603b454665ba4060550b4e9aa0.json",
+      "real-utils-ru_RU-b3c66931a03e39a842384fb81443cb05.json",
+      "real-utils-ru_RU-bd8f888d3790e3faf824d6fd69319a28.json",
+      "real-media-library-ru_RU.mo",
+      "real-media-library-ru_RU.po",
+      "real-product-manager-wp-client-ru_RU.mo",
+      "real-product-manager-wp-client-ru_RU.po",
+      "real-utils-ru_RU.mo",
+      "real-utils-ru_RU.po",
+      "utils-ru_RU.mo",
+      "utils-ru_RU.po"
+    ],
+    "sk_SK": [
+      "real-media-library-sk_SK-164153d8a466523469c70e75e903b00a.json",
+      "real-media-library-sk_SK-79735bb54a669d95361e4bd368678050.json",
+      "real-product-manager-wp-client-sk_SK-168726dbe96b3ce427e7fedce31bb0bc.json",
+      "real-utils-sk_SK-61a60894c517b346c6b99608ccce350d.json",
+      "real-utils-sk_SK-74ccc0603b454665ba4060550b4e9aa0.json",
+      "real-utils-sk_SK-b3c66931a03e39a842384fb81443cb05.json",
+      "real-utils-sk_SK-bd8f888d3790e3faf824d6fd69319a28.json",
+      "real-media-library-sk_SK.mo",
+      "real-media-library-sk_SK.po",
+      "real-product-manager-wp-client-sk_SK.mo",
+      "real-product-manager-wp-client-sk_SK.po",
+      "real-utils-sk_SK.mo",
+      "real-utils-sk_SK.po",
+      "utils-sk_SK.mo",
+      "utils-sk_SK.po"
+    ],
+    "sv_SE": [
+      "real-media-library-sv_SE-164153d8a466523469c70e75e903b00a.json",
+      "real-media-library-sv_SE-79735bb54a669d95361e4bd368678050.json",
+      "real-media-library-sv_SE.mo",
+      "real-media-library-sv_SE.po"
+    ],
+    "tr_TR": [
+      "real-media-library-tr_TR-164153d8a466523469c70e75e903b00a.json",
+      "real-media-library-tr_TR-79735bb54a669d95361e4bd368678050.json",
+      "real-media-library-tr_TR.mo",
+      "real-media-library-tr_TR.po"
+    ],
+    "uk": [
+      "real-media-library-uk-164153d8a466523469c70e75e903b00a.json",
+      "real-media-library-uk-79735bb54a669d95361e4bd368678050.json",
+      "real-product-manager-wp-client-uk-168726dbe96b3ce427e7fedce31bb0bc.json",
+      "real-utils-uk-61a60894c517b346c6b99608ccce350d.json",
+      "real-utils-uk-74ccc0603b454665ba4060550b4e9aa0.json",
+      "real-utils-uk-b3c66931a03e39a842384fb81443cb05.json",
+      "real-utils-uk-bd8f888d3790e3faf824d6fd69319a28.json",
+      "real-media-library-uk.mo",
+      "real-media-library-uk.po",
+      "real-product-manager-wp-client-uk.mo",
+      "real-product-manager-wp-client-uk.po",
+      "real-utils-uk.mo",
+      "real-utils-uk.po",
+      "utils-uk.mo",
+      "utils-uk.po"
+    ],
+    "zh_CN": [
+      "real-media-library-zh_CN-164153d8a466523469c70e75e903b00a.json",
+      "real-media-library-zh_CN-79735bb54a669d95361e4bd368678050.json",
+      "real-media-library-zh_CN.mo",
+      "real-media-library-zh_CN.po"
+    ]
+  },
+  "prereleaseEndpoint": "https://storage-dev-1.owlsrv.de/wp-language-packs/real-media-library"
+}

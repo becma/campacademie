@@ -1,0 +1,25 @@
+.equipe-card {
+    background-color: white;
+    width: 300px;
+    text-align: center;
+    margin: 150px 50px 50px;
+    padding: 50px 30px;
+
+    img {
+        max-height: 220px;
+        width: auto;
+        border-radius: 50%;
+        margin-top: -75%;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+    }
+
+    p {
+        color: $mauve-ca;
+        font-size: 2rem;
+        margin: 0;
+    }
+}

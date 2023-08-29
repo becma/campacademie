@@ -1,0 +1,55 @@
+.content-img-block {
+    &-content {
+        p {
+            font-size: 2rem;
+        }
+
+        &-1, &-2 {
+            display: flex;
+            margin: 80px 0;
+
+            &-img {
+                display: flex;
+
+                img {
+                    max-height: 300px;
+                    width: auto;
+                }
+
+                .arrow-left {
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 150px 70px 150px 0;
+
+                    &.red {
+                        border-color: transparent $rouge-ca transparent transparent;
+                    }
+                }
+
+                .arrow-right {
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 150px 0 150px 70px;
+
+                    &.yellow {
+                        border-color: transparent transparent transparent $jaune-ca;
+                    }
+                }
+            }
+        }
+
+        &-1 {
+            &-img {
+                margin-left: 50px;
+            }
+        }
+
+        &-2 {
+            &-img {
+                margin-right: 50px;
+            }
+        }
+    }
+}

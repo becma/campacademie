@@ -1,0 +1,55 @@
+.fullscreen-hero {
+    width: 100%;
+    margin-top: 0;
+
+    &-container {
+        position: relative;
+        max-width: 2000px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        vertical-align: top;
+    }
+
+    .text-box {
+        background-color: black;
+        color: white;
+        padding: 20px;
+
+        @media #{$xxlarge-plus} {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 60px;
+            position: absolute;
+            width: 100%;
+        }
+
+        h2 {
+            color: white;
+            font-size: 6rem;
+            line-height: 1;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        &[class*='top'] {
+            top: 0;
+        }
+
+        &[class*='bas'] {
+            bottom: 0;
+        }
+
+        &[class*='gauche'] {
+            left: 0;
+        }
+
+        &[class*='droite'] {
+            right: 0;
+        }
+    }
+}

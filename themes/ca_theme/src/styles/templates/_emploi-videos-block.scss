@@ -1,0 +1,39 @@
+.emploi-videos-block {
+    &-content {
+        display: flex;
+        justify-content: center;
+
+        &-img {
+            width: 55%;
+            overflow: hidden;
+            max-height: 1000px;
+
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        &-videos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 45%;
+
+            h2 {
+                font-size: 4rem;
+                line-height: 1.25;
+                margin-bottom: 20px;
+            }
+
+            &-video1, &-video2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+            }
+        }
+    }
+}

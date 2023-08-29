@@ -1,0 +1,43 @@
+.rabais {
+    padding: 60px;
+
+    &-container {
+
+        @media #{$large-plus} {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        &-infos {
+            p {
+                padding: 50px 50px 0;
+            }
+        }
+
+        &-rabais {
+            text-align: center;
+            min-width: 350px;
+            width: 50%;
+            margin: 0 auto;
+
+            & [class*='num'] {
+                font-size: 5rem;
+                font-weight: bold;
+                line-height: 1;
+            }
+
+            > div {
+                padding: 30px;
+            }
+
+            > div:first-child {
+                border-bottom: 1px solid black;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+@import '../mixins';
+
+.site-list {
+
+    &-content {
+
+        &-filter {
+
+            &.-mobile {
+                position: relative;
+                width: fit-content;
+                margin: 0 auto;
+
+                @media #{$large-plus} {
+                    display: none;
+                }
+
+                select {
+                    -moz-appearance:none; /* Firefox */
+                    -webkit-appearance:none; /* Safari and Chrome */
+                    appearance:none;
+                    background: none;
+                    border: 3px solid transparent;
+                    border-bottom: 5px solid $vert-ca;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    padding: 15px;
+                    position: relative;
+                    margin: 2px;
+                    min-width: 350px;
+                    z-index: 2;
+
+                    &:focus {
+                        outline: 1px solid $mauve-ca;
+                    }
+
+                    &.active + .fa-solid {
+                        transform: rotate(180deg) translateY(50%);
+                    }
+                }
+
+                .fa-solid {
+                    font-size: 2rem;
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transition: all 0.5s ease-in-out;
+                }
+            }
+
+            &.-desktop {
+                border-bottom: 1px solid black;
+                display: none;
+                justify-content: space-between;
+                margin: 80px 0 30px;
+
+                @media #{$large-plus} {
+                    display: flex;
+                }
+
+                button {
+                    @include button-reset;
+                    display: block;
+                    font-size: 2rem;
+                    position: relative;
+                    text-transform: uppercase;
+                    transition: all 0.5s ease-in-out;
+
+                    &:hover, &:focus {
+                        font-weight: bold;
+                        outline: none;
+                    }
+
+                    &:after {
+                        transition: all 0.5s ease-in-out;
+                    }
+
+                    &.active {
+                        font-weight: bold;
+
+                        &:after {
+                            content: '';
+                            height: 5px;
+                            background-color: $vert-ca;
+                            position: absolute;
+                            left: 0;
+                            bottom: -3px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        
+        &-sites {
+            @media #{$medium-plus} {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+                justify-items: center;
+            }
+        }
+    }
+}

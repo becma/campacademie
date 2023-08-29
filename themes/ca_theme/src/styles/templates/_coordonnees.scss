@@ -1,0 +1,62 @@
+.coordonnees {
+    padding: 30px;
+
+    @media #{$large-plus} {
+        padding: 80px;
+    }
+
+    &-content {
+        width: min-content;
+        font-size: 2rem;
+
+        @media #{$large-plus} {
+            display: flex;
+            justify-content: space-evenly;
+            width: auto;
+        }
+
+        > div {
+            display: flex;
+            align-items: center;
+
+            @media #{$large-plus} {
+                flex-direction: column;
+            }
+        }
+
+        > div > div > div {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            
+            @media #{$large-plus} {
+                display: flex;
+                justify-content: center;
+
+            }
+        }
+
+        i {
+            color: $rouge-ca;
+            font-size: 10rem;
+            margin: 30px;
+        }
+
+        p, a  {
+            color: $mauve-ca;
+        }
+
+        .tel1, .tel2 {
+
+            p {
+                margin: 0 10px 0 0;
+            }
+        }
+
+        &-hours {
+            p {
+                margin: 0;
+            }
+        }
+    }
+}

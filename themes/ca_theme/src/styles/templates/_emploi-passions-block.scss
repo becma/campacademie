@@ -1,0 +1,21 @@
+.emploi-passions-block {
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px;
+
+        &-text {
+            font-size: 2rem;
+            width: 60%;
+
+            h2 {
+                font-size: 6rem;
+                margin-bottom: 30px;
+            }
+
+            ul {
+                margin: 20px;
+            }
+        }
+    }
+}

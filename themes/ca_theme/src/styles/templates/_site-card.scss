@@ -1,0 +1,64 @@
+.site-card {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    margin: 30px auto;
+    max-width: 400px;
+
+    @media #{$medium-plus} {
+        margin: 30px 50px;
+    }
+
+    &_img-container {
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        .shadow {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 32.81%, #FFFFFF 100%);
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &_infos {
+        padding: 20px 5px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        h2 {
+            color: black;
+            font: 300 2.5rem $barlow;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        &-ville-quartier {
+            min-height: 70px;
+        }
+
+        &-ville {
+            color: $mauve-ca;
+            margin-bottom: 0;
+        }
+
+        &-quartier {
+            margin-top: 0;
+        }
+
+        .cta {
+            display: block;
+            margin: 20px auto;
+            width: fit-content;
+        }
+    }
+}

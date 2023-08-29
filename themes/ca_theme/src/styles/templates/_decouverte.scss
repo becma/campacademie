@@ -1,0 +1,38 @@
+.decouverte {
+    &-content {
+        h2 {
+            text-align: center;
+            margin: 80px 0 60px;
+        }
+
+        &-ctas {
+            width: 90%;
+            margin: 0 auto;
+
+            @media #{$medium-plus} {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            > div {
+                flex: 1 1 0px;
+                margin: 10px;
+
+                @media #{$large-plus} {
+                    margin: 40px;
+                }
+            }
+
+            a {
+                color: black;
+                display: block;
+                font-size: 2rem;
+                height: 100%;
+                padding: 20px;
+                text-align: center;
+                text-decoration: none;
+                width: 100%;
+            }
+        }
+    }
+}

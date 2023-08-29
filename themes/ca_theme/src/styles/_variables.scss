@@ -1,0 +1,28 @@
+@import 'fonts';
+
+/* COULEURS */
+
+$mauve-ca : #5B38B1;
+$jaune-ca: #FCCE01;
+$vert-ca: #94D60A;
+$rouge-ca: #F42434;
+$grey-ca: #DDDDDD;
+
+/* FONTS */
+
+$fira: 'Fira', sans-serif;
+$barlow: 'Barlow', sans-serif;
+
+/* BREAKPOINTS */
+
+$small-size: 480px;
+$medium-size: 800px;
+$large-size: 1024px;
+$xlarge-size: 1200px;
+$xxlarge-size: 1440px;
+
+$small-plus: '(min-width: #{$small-size + 1})';
+$medium-plus: '(min-width: #{$medium-size + 1})';
+$large-plus: '(min-width: #{$large-size + 1})';
+$xlarge-plus: '(min-width: #{$xlarge-size + 1})';
+$xxlarge-plus: '(min-width: #{$xxlarge-size + 1})';

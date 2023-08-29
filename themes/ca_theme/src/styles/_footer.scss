@@ -1,0 +1,22 @@
+.footer {
+    background-color: white;
+    width: 100%;
+    padding: 30px;
+
+    &-content {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+        max-width: 1440px;
+        width: 100%;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    img {
+        height: 75px;
+        width: auto;
+    }
+}

@@ -1,0 +1,43 @@
+.ratios {
+    margin: 70px;
+
+    &-content {
+
+        h2 {
+            text-align: center;
+        }
+
+        &-infos {
+            display: flex;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        &-table-container {
+            background-color: white;
+            border: 1px solid $mauve-ca;
+            color: black;
+            margin: 30px auto;
+            padding: 30px;
+            width: fit-content;
+        }
+        
+        table {
+            border-collapse: collapse;
+            font-size: 2rem;
+        }
+
+        tr {
+            border-bottom: 1px solid $mauve-ca;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        th {
+            color: $mauve-ca;
+            text-align: right;
+        }
+    }
+}
