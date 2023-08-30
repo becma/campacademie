@@ -11,4 +11,4 @@ Template Name: Site
     <?php get_template_part('/templates/site-list'); ?>
 </main>
 
-<?php get_footer() ?>
+<?php get_footer(); ?>
