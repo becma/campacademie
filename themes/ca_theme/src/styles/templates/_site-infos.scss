@@ -1,0 +1,39 @@
+.site-infos {
+    
+    h2 {
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .info-container {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        padding: 50px;
+
+        > div {
+            padding: 20px;
+        }
+    
+        h3 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        p, a {
+            color: $mauve-ca;
+            font-size: 2rem;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        a {
+            text-decoration: underline;
+
+            &:hover, &focus {
+                text-decoration: none;
+            }
+        }
+    }
+}

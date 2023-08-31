@@ -8,7 +8,7 @@
             "name": "imagefs",
             "aria-label": "",
             "type": "image",
-            "instructions": "",
+            "instructions": "Ajoutez une image ici seulement si vous désirez qu'elle soit différente de l'image présentée dans le répertoires des sites",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -101,6 +101,28 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_64ef3f74d9acc",
+            "label": "Traiteur?",
+            "name": "traiteur",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": [],
+            "default_value": "false",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
         }
     ],
     "location": [
@@ -121,5 +143,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1693359701
+    "modified": 1693400974
 }
