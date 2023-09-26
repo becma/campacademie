@@ -1,15 +1,15 @@
 {
-    "key": "group_6372e62900079",
-    "title": "Fullscreen Hero",
+    "key": "group_64ee9c32daf0f",
+    "title": "Fullscreen Hero - Accueil",
     "fields": [
         {
-            "key": "field_6372e62995d76",
+            "key": "field_64ee9c32ddca6",
             "label": "Image",
             "name": "imagefs",
             "aria-label": "",
             "type": "image",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -28,17 +28,17 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6372e64d95d77",
+            "key": "field_64ee9c32ddcd4",
             "label": "Alt",
             "name": "altfs",
             "aria-label": "",
             "type": "text",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": [
                 [
                     {
-                        "field": "field_6372e62995d76",
+                        "field": "field_64ee9c32ddca6",
                         "operator": "!=empty"
                     }
                 ]
@@ -55,61 +55,14 @@
             "append": ""
         },
         {
-            "key": "field_6372e65d95d78",
-            "label": "Titre",
-            "name": "titlefs",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6372e6f195d79",
-            "label": "Sous-texte",
-            "name": "soustextefs",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6372ee3c68a4a",
+            "key": "field_64ee9c32ddcdb",
             "label": "Position de la boîte de texte",
             "name": "boxpositionfs",
             "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6372e62995d76",
-                        "operator": "!=empty"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -128,6 +81,46 @@
             "ui": 0,
             "ajax": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_64ee9c485b27a",
+            "label": "Titre",
+            "name": "titlefs",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64ee9c6045e66",
+            "label": "Sous-texte",
+            "name": "soustextefs",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -148,5 +141,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1693354220
+    "modified": 1693400691
 }

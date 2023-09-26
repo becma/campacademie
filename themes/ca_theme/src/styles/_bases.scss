@@ -66,6 +66,7 @@ a, button {
     color: black;
     font-size: 1.75rem;
     text-decoration: none;
+    transition: 0.3s all ease-in-out;
 
     &[class*='cta'] {
         padding: 10px;
@@ -113,4 +114,9 @@ a, button {
 
 .unbr {
     white-space: nowrap;
+}
+
+h4 {
+    margin: 0;
+    font-size: 2rem;
 }

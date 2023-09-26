@@ -29,5 +29,4 @@
 
     <script src="<?php bloginfo('template_url') ?>/src/js/main.js"></script>
 </body>
-
 </html>

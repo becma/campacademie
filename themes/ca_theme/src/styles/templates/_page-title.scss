@@ -2,6 +2,10 @@
     background-color: $grey-ca;
     margin-top: 0;
 
+    .site-page & {
+        margin-bottom: 0;
+    }
+
     &_content {
         display: flex;
         align-items: end;
