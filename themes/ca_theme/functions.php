@@ -40,7 +40,7 @@
                     'public' => true,
                     'has_archive' => true,
                     'menu_icon' => 'dashicons-filter',
-                    'rewrite' => array('slug' => 'camps'),
+                    'rewrite' => array('slug' => 'categories'),
                     'show_in_rest' => true,
                     'supports' => array('title', 'id'),       
                 )
