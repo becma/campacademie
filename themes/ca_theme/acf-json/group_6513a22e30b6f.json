@@ -1,0 +1,62 @@
+{
+    "key": "group_6513a22e30b6f",
+    "title": "Camp - Catégories",
+    "fields": [
+        {
+            "key": "field_6513a22e5cb5b",
+            "label": "Catégories",
+            "name": "camp_categories",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "new": "Nouveau camp",
+                "ado": "Camp d'ado",
+                "miniclub": "Camp MiniClub",
+                "regu": "Camp régulier",
+                "sport": "Camp sportif",
+                "art": "Camp artistique",
+                "decou": "Camp découverte",
+                "aven": "Camp aventure",
+                "aqua": "Camp aquatique",
+                "culi": "Camp culinaire",
+                "science": "Camp scientifique",
+                "ang": "Camp d'anglais",
+                "form": "Camp de formation",
+                "voile": "Camp de voile"
+            },
+            "default_value": [],
+            "return_format": "value",
+            "allow_custom": 0,
+            "layout": "vertical",
+            "toggle": 0,
+            "save_custom": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "camps"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1695786617
+}

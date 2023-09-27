@@ -23,26 +23,6 @@
             "append": ""
         },
         {
-            "key": "field_64ef37aa885df",
-            "label": "Téléphone - Libellé",
-            "name": "phone_label",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Téléphone",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_64ef3888885e0",
             "label": "Téléphone - Numéro",
             "name": "phone_number",
@@ -61,26 +41,6 @@
             "max": "",
             "placeholder": "",
             "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_64ef38d6885e1",
-            "label": "Courriel - Libellé",
-            "name": "email_label",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Courriel",
-            "maxlength": "",
-            "placeholder": "",
             "prepend": "",
             "append": ""
         },
@@ -104,26 +64,6 @@
             "append": ""
         },
         {
-            "key": "field_64ef3b15aedd9",
-            "label": "Service de surveillance - Libellé",
-            "name": "surveillance_label",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Service de surveillance",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_64ef3b2baedda",
             "label": "Service de surveillance - Heures",
             "name": "surveillance_hours",
@@ -138,26 +78,6 @@
                 "id": ""
             },
             "default_value": "7h30 à 17h30",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_64ef3c218aef1",
-            "label": "Adresse - Libellé",
-            "name": "address_label",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Adresse",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
@@ -204,34 +124,6 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_64ef3fc29c403",
-            "label": "Traiteur - Libellé",
-            "name": "traiteur_label",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_64ef3fb09c402",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Traiteur Offert",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_64ef4b753606d",
             "label": "Traiteur - Lien - Libellé",
             "name": "traiteur_link_label",
@@ -246,26 +138,6 @@
                 "id": ""
             },
             "default_value": "Plus d'informations",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_64f088824244f",
-            "label": "Dates de camp - Libellé",
-            "name": "dates_camp_label",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Dates de camp",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
@@ -310,5 +182,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1693486772
+    "modified": 1695784397
 }
