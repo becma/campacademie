@@ -30,6 +30,21 @@
                     'supports' => array('title', 'id'),       
                 )
         );
+
+        register_post_type( 'categories',
+                array(
+                    'labels' => array(
+                        'name' => __( 'Catégories' ),
+                        'singular_name' => __( 'Catégorie' )
+                    ),
+                    'public' => true,
+                    'has_archive' => true,
+                    'menu_icon' => 'dashicons-filter',
+                    'rewrite' => array('slug' => 'categories'),
+                    'show_in_rest' => true,
+                    'supports' => array('title', 'id'),       
+                )
+        );
     };
 
 function remove_support(){
