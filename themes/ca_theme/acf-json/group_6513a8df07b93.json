@@ -1,0 +1,83 @@
+{
+    "key": "group_6513a8df07b93",
+    "title": "Catégories - Infos",
+    "fields": [
+        {
+            "key": "field_6513a8df93f9e",
+            "label": "Nom officiel",
+            "name": "nom_officiel",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6513a8f393f9f",
+            "label": "Répertoire - Catégorie désignant...",
+            "name": "id",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "nouveau": "Nouveau camp",
+                "ado": "Camp d'ado",
+                "miniclub": "Camp miniclub",
+                "regulier": "Camp régulier",
+                "sportif": "Camp sportif",
+                "artistique": "Camp artistique",
+                "decouverte": "Camp découverte",
+                "aventure": "Camp aventure",
+                "aquatique": "Camp aquatique",
+                "culinaire": "Camp culinaire",
+                "scientifique": "Camp scientifique",
+                "anglais": "Camp d'anglais",
+                "formation": "Camp de formation",
+                "voile": "Camp de voile"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "categories"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1695787472
+}

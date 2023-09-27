@@ -7,7 +7,7 @@
             "label": "Catégories",
             "name": "camp_categories",
             "aria-label": "",
-            "type": "checkbox",
+            "type": "post_object",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -16,28 +16,14 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "new": "Nouveau camp",
-                "ado": "Camp d'ado",
-                "miniclub": "Camp MiniClub",
-                "regu": "Camp régulier",
-                "sport": "Camp sportif",
-                "art": "Camp artistique",
-                "decou": "Camp découverte",
-                "aven": "Camp aventure",
-                "aqua": "Camp aquatique",
-                "culi": "Camp culinaire",
-                "science": "Camp scientifique",
-                "ang": "Camp d'anglais",
-                "form": "Camp de formation",
-                "voile": "Camp de voile"
-            },
-            "default_value": [],
-            "return_format": "value",
-            "allow_custom": 0,
-            "layout": "vertical",
-            "toggle": 0,
-            "save_custom": 0
+            "post_type": [
+                "categories"
+            ],
+            "taxonomy": "",
+            "return_format": "object",
+            "multiple": 1,
+            "allow_null": 0,
+            "ui": 1
         }
     ],
     "location": [
@@ -58,5 +44,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1695786617
+    "modified": 1695787512
 }
