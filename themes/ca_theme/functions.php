@@ -1,4 +1,7 @@
 <?php
+
+    // CUSTOM POSTS TYPES
+
     function create_posttype() {
 
         register_post_type( 'sites',
@@ -45,14 +48,41 @@
                     'supports' => array('title', 'id'),       
                 )
         );
+
+        register_post_type( 'globalinfos',
+                array(
+                    'labels' => array(
+                        'name' => __( 'Infos globales' ),
+                        'singular_name' => __( 'Info globale' )
+                    ),
+                    'public' => true,
+                    'has_archive' => true,
+                    'menu_icon' => 'dashicons-megaphone',
+                    'rewrite' => array('slug' => 'infoglobales'),
+                    'show_in_rest' => true,
+                    'supports' => array('title', 'id'),       
+                )
+        );
     };
 
-function remove_support(){
-    remove_post_type_support( 'post', 'editor');
-    remove_post_type_support( 'page', 'editor');
-    remove_post_type_support( 'product', 'editor');
-}
 
+    // REMOVE WYSIWYG
+
+    function remove_support() {
+        remove_post_type_support( 'post', 'editor');
+        remove_post_type_support( 'page', 'editor');
+        remove_post_type_support( 'product', 'editor');
+    }
+
+
+    // REMOVE UNUSED DASHBOARD SECTIONS
+
+    function remove_menus() {
+        remove_menu_page('edit.php');
+        remove_menu_page('edit-comments.php');
+    }
+
+    add_action('init', 'create_posttype');
     add_action('init', 'remove_support');
-    add_action( 'init', 'create_posttype' );
+    add_action('admin_menu', 'remove_menus');
 ?>

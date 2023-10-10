@@ -3,6 +3,8 @@
         $args,
         array(
             'img' => '',
+            'brochure' => '',
+            'brochure_label' => ''
         )
     );
 
@@ -26,9 +28,14 @@
             </div>
         <?php } else { ?>
             <div class="text-box <?php echo $boxposition; ?>">
-                <a class="fs_link cta" href="">
-                    <?php the_field('texte_lien'); ?>
-                </a>
+                <div class="ctas-holder">
+                    <a class="fs_link cta green" href="<?php echo $args['brochure'] ?>">
+                        <?php echo $args['brochure_label']; ?>
+                    </a>
+                    <a class="fs_link cta yellow" href="">
+                        <?php the_field('texte_lien'); ?>
+                    </a>
+                </div>
             </div>
         <?php } ?>
     </div>

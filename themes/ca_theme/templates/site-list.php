@@ -68,7 +68,7 @@
                     $brochure_file = get_field('brochure_file', $site->ID);
                     $brochure_file_url = $brochure_file['url'];
                 } else {
-                    $brochure_file_url = 'tata';
+                    $brochure_file_url = '';
                 }
                 if (get_field('quartier', $site->ID)) {
                     $quartier = get_field('quartier', $site->ID);
