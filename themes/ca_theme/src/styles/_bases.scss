@@ -56,10 +56,14 @@ h1 {
 
 h2 {
     color: $mauve-ca;
-    font-size: 10rem;
+    font-size: 5rem;
     font-weight: 400;
-    line-height: 0.75;
+    line-height: 1;
     margin: 0;
+
+    @media #{$medium-plus} {
+        font-size: 9rem;
+    }
 }
 
 a, button {
@@ -91,6 +95,7 @@ a, button {
         &:hover, &:focus {
             background-color: $mauve-ca !important;
             color: white !important;
+            text-decoration: underline;
         }
     }
 

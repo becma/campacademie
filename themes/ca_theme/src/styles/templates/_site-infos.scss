@@ -1,4 +1,7 @@
+@import 'variables';
+
 .site-infos {
+    margin: 50px 30px 0 30px;
     
     h2 {
         text-transform: uppercase;
@@ -6,9 +9,17 @@
     }
 
     .info-container {
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        padding: 50px;
+
+        @media #{$small-plus} {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            padding: 50px;
+
+        }
+
+        @media #{$medium-plus} {
+            grid-template-columns: repeat(3, auto);
+        }
 
         > div {
             padding: 20px;
