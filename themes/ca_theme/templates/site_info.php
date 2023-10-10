@@ -40,7 +40,7 @@ $dates_camp = get_field('dates_camp');
                     <p><?php echo $surveillance; ?></p>
                 </div>
             <?php endif ?>
-            <?php if ($adresse !== "") : ?>
+            <?php if ($adresse != "") : ?>
                 <div class="adresse">
                     <h3>Adresse</h3>
                     <p><?php echo $adresse; ?></p>
