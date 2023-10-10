@@ -5,25 +5,49 @@
         }
 
         &-1, &-2 {
-            display: flex;
-            margin: 80px 0;
+            margin: 80px 20px;
+
+            @media #{$xlarge-plus} {
+                display: flex;
+                margin: 80px 20px;
+            }
 
             &-img {
                 display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                height: 375px;
 
                 img {
                     max-height: 300px;
                     width: auto;
+                    position: relative;
+                    z-index: 1;
                 }
 
                 .arrow-left {
                     width: 0;
                     height: 0;
                     border-style: solid;
-                    border-width: 150px 70px 150px 0;
+                    border-width: 375px 150px 0 150px;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
 
                     &.red {
-                        border-color: transparent $rouge-ca transparent transparent;
+                        border-color: $rouge-ca transparent transparent transparent;
+                    }
+
+                    @media #{$xlarge-plus} {
+                        border-width: 150px 70px 150px 0;
+                        position: static;
+                        transform: translateX(0px);
+
+                        &.red {
+                            border-color: transparent $rouge-ca transparent transparent;
+                        }
                     }
                 }
 
@@ -31,10 +55,24 @@
                     width: 0;
                     height: 0;
                     border-style: solid;
-                    border-width: 150px 0 150px 70px;
+                    border-width: 375px 150px 0 150px;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
 
                     &.yellow {
-                        border-color: transparent transparent transparent $jaune-ca;
+                        border-color: $jaune-ca transparent transparent transparent;
+                    }
+
+                    @media #{$xlarge-plus} {
+                        border-width: 150px 0 150px 70px;
+                        position: static;
+                        transform: translateX(0px);
+
+                        &.yellow {
+                            border-color: transparent transparent transparent $jaune-ca;
+                        }
                     }
                 }
             }
@@ -42,13 +80,20 @@
 
         &-1 {
             &-img {
-                margin-left: 50px;
+
+                @media #{$xlarge-plus} {
+                    margin-left: 50px;
+                    order: 2;
+                }
             }
         }
 
         &-2 {
             &-img {
-                margin-right: 50px;
+
+                @media #{$xlarge-plus} {
+                    margin-right: 50px;
+                }
             }
         }
     }

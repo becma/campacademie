@@ -19,6 +19,10 @@
                     <img src="<?php bloginfo('template_url'); ?>/src/img/ca_rogne.png" alt="">
                 </a>
             </div>
+            <button class="nav-btn" aria-label="Ouvrir le menu">
+                <i class="fa-solid fa-bars -active" aria-hidden="true"></i>
+                <i class="fa-solid fa-x" aria-hidden="true"></i>
+            </button>
                 <?php
                     wp_nav_menu( $arg = array (
                         'menu' => 'Header',
