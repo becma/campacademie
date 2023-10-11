@@ -187,35 +187,6 @@
         return $states;
     }
 
-    function hidepoststatus() {
-
-        global $post;
-
-?>
-    
-        
-        <style>
-            #post_status option[value="publish"], #post_status option[value="pending"], #post_status option[value="draft"], #post_status option[value="private"] {
-                display: none;
-            }
-
-            .inline-edit-status option[value="publish"], .inline-edit-status option[value="pending"], .inline-edit-status option[value="draft"], .inline-edit-status option[value="private"] {
-                display: none;
-            }
-        </style>
-        
-<?php
-        
-    }
-
-    function dont_publish( $data , $postarr ) {  
-        {
-          $data['post_status'] = 'visible';   
-        }
-        return $data;   
-      }  
-      
-
     add_action('init', 'create_posttype');
     add_action('init', 'remove_support');
     add_action('admin_menu', 'remove_menus');
@@ -227,8 +198,6 @@
     add_action('post_submitbox_misc_actions', 'add_to_post_hidden_status_dropdown');
     add_action('admin_footer-edit.php','hidden_status_add_in_quick_edit');
     add_filter( 'display_post_states', 'display_archive_state_hidden' );
-    add_action( 'admin_head', 'hidepoststatus' );
-    add_filter('wp_insert_post_data' , 'dont_publish' , '99', 2); 
 
 
 ?>
