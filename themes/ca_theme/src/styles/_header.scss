@@ -1,70 +1,155 @@
 @import 'variables';
+@import 'mixins';
 
 .header {
     background-color: white;
-    height: 70px;
-    margin-top: 60px;
     z-index: 1;
+    margin-top: 130px;
+
+    @media #{$medium-plus} {
+        height: 70px;
+    }
+
+    @media #{$large-plus} {
+        margin-top: 60px;
+    }
 
     &-content {
+        height: 0;
         width: 100%;
         max-width: 2000px;
         margin: 0 auto;
+
+        @media #{$medium-plus} {
+            height: 100%;
+        }
     }
 
     nav  {
-        display: flex;
-        justify-content: flex-end;
-        height: 100%;
-        width: 100%;
-        position: relative;
+        .nav-btn {
+            @include button-reset;
+            color: white;
+            font-size: 3rem;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+
+            @media #{$medium-plus} {
+                display: none;
+            }
+
+            i {
+                display: none;
+
+                &.-active{
+                    display: block;
+                }
+            }
+        }
+
+        .menu-header-container {
+            height: 0;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+            display: none;
+
+            &.active {
+                background-color: $mauve-ca;
+                height: 100vh;
+                display: block;
+            }
+
+            @media #{$medium-plus} {
+                display: block;
+                height: 100%;
+                width: 100%;
+            }
+        }
 
         ul {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
             list-style-type: none;
             height: 100%;
+            width: 100%;
             margin: 0;
             padding: 0;
+            position: relative;
+            z-index: 3;
+
+            @media #{$medium-plus} {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: static;
+                z-index: 0;
+            }
+
+            @media #{$large-plus} {
+                justify-content: flex-end;
+            }
 
             li {
                 display: flex;
                 align-items: center;
-                justify-content: center;
-                height: 100%;
-                padding: 0 15px;
+                padding: 15px;
                 font-size: 2rem;
 
+                @media #{$medium-plus} {
+                    height: 100%;
+                    padding: 0 15px;
+                    justify-content: center;
+                }
+
                 a {
-                    color: black;
+                    color: white;
                     text-decoration: none;
+                    font-size: 3rem;
+
+                    @media #{$medium-plus} {
+                        color: black;
+                        font-size: 1.75rem;
+                    }
                 }
 
                 &.choisir-son-site {
                     background: $jaune-ca;
+
+                    a {
+                        color: black;
+                    }
                 }
             }
         }
     }
 
     .logo {
-        height: 175px;
-        width: 175px;
         background: white;
         border-radius: 50%;
         position: absolute;
-        top: -50px;
-        left: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 145px;
+        width: 145px;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @media #{$medium-plus} {
+            top: 30px;
+        }
+
+        @media #{$large-plus} {
+            top: 50px;
+            left: 50px;
+            transform: translateX(0%);
+        }
         
         
         img {
             display: block;
             height: auto;
-            width: 160px;
+            width: 120px;
         }
     }
 }

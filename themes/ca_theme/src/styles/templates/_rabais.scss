@@ -1,5 +1,9 @@
 .rabais {
-    padding: 60px;
+    padding: 60px 0;
+
+    @media #{$medium-plus} {
+        padding: 60px;
+    }
 
     &-container {
 
@@ -17,7 +21,7 @@
 
         &-rabais {
             text-align: center;
-            min-width: 350px;
+            min-width: 300px;
             width: 50%;
             margin: 0 auto;
 

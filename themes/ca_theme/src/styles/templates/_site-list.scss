@@ -28,7 +28,7 @@
                     position: relative;
                     margin: 2px;
                     min-width: 350px;
-                    z-index: 2;
+                    z-index: 0;
 
                     &:focus {
                         outline: 1px solid $mauve-ca;
