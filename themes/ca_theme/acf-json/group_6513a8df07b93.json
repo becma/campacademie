@@ -23,6 +23,26 @@
             "append": ""
         },
         {
+            "key": "field_652622b0d1f71",
+            "label": "Nom - pluriel",
+            "name": "plural_noun",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_6513a8f393f9f",
             "label": "Répertoire - Catégorie désignant...",
             "name": "id",
@@ -79,5 +99,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1695787472
+    "modified": 1696998082
 }

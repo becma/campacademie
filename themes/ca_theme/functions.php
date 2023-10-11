@@ -206,7 +206,15 @@
         
 <?php
         
-          }
+    }
+
+    function dont_publish( $data , $postarr ) {  
+        {
+          $data['post_status'] = 'visible';   
+        }
+        return $data;   
+      }  
+      
 
     add_action('init', 'create_posttype');
     add_action('init', 'remove_support');
@@ -220,4 +228,7 @@
     add_action('admin_footer-edit.php','hidden_status_add_in_quick_edit');
     add_filter( 'display_post_states', 'display_archive_state_hidden' );
     add_action( 'admin_head', 'hidepoststatus' );
+    add_filter('wp_insert_post_data' , 'dont_publish' , '99', 2); 
+
+
 ?>
