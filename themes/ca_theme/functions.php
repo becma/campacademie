@@ -82,66 +82,7 @@
         remove_menu_page('edit-comments.php');
     }
 
-    // ADD CUSTOM "HIDDEN" STATUS IN POSTS
-
-    function hidden_status_creation(){
-        register_post_status( 'hidden', array(
-            'label'                     => _x( 'Hidden', 'post' ),
-            'label_count'               => _n_noop( 'Hidden <span class="count">(%s)</span>', 'Hidden <span 
-            class="count">(%s)</span>'),
-            'public'                    => false,
-            'exclude_from_search'       => true,
-            'show_in_admin_all_list'    => true,
-            'show_in_admin_status_list' => true,
-            'private'                   => true
-        ));
-    }
-
-    function add_to_post_hidden_status_dropdown()
-    {
-        global $post;
-        $status = ($post->post_status == 'hidden') ? "jQuery( '#post-status-display' ).text( 'Hidden' ); jQuery( 
-        'select[name=\"post_status\"]' ).val('hidden');" : '';
-        echo "<script>
-        jQuery(document).ready( function() {
-        jQuery( 'select[name=\"post_status\"]' ).append( '<option value=\"hidden\">Hidden</option>' );
-        ".$status."
-        });
-        </script>";
-    }
-
-    function hidden_status_add_in_quick_edit() {
-        global $post;
-        echo "<script>
-        jQuery(document).ready( function() {
-        jQuery( 'select[name=\"_status\"]' ).append( '<option value=\"hidden\">Hidden</option>' );
-        });
-        </script>";
-    }
-
-    function display_archive_state_hidden( $states ) {
-        global $post;
-        $arg = get_query_var( 'post_status' );
-        if($arg != 'hidden'){
-            if($post->post_status == 'hidden'){
-                echo "<script>
-                jQuery(document).ready( function() {
-                jQuery( '#post-status-display' ).text( 'Hidden' );
-                });
-                </script>";
-                return array('Hidden');
-            }
-        }
-        return $states;
-    }
-
     add_action('init', 'create_posttype');
     add_action('init', 'remove_support');
     add_action('admin_menu', 'remove_menus');
-    add_action('init', 'hidden_status_creation');
-    add_action('post_submitbox_misc_actions', 'add_to_post_hidden_status_dropdown');
-    add_action('admin_footer-edit.php','hidden_status_add_in_quick_edit');
-    add_filter( 'display_post_states', 'display_archive_state_hidden' );
-
-
 ?>
