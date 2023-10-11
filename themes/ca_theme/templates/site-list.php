@@ -36,7 +36,8 @@
             <?php   
                 $sites = get_posts(array(
                     'post_type' => 'sites',
-                    'numberposts' => -1
+                    'numberposts' => -1,
+                    'post_status'    => 'visible'
                 )) ;
             ?>
 
