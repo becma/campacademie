@@ -208,18 +208,13 @@
         
     }
 
-    function prevent_post_change( $data, $postarr ) {
-        if ( ! isset($postarr['ID']) || ! $postarr['ID'] ) return $data;
-        $old = get_post($postarr['ID']); // the post before update
-        if (
-            $old->post_status !== 'visible' &&
-            $old->post_status !== 'hidden' && 
-            $old->post_status !== 'trash' // without this post restoring from trash fail
-        ) {
-            $data['post_status'] = 'visible';
+    function dont_publish( $data , $postarr ) {  
+        {
+          $data['post_status'] = 'visible';   
         }
-        return $data;
-    }
+        return $data;   
+      }  
+      
 
     add_action('init', 'create_posttype');
     add_action('init', 'remove_support');
@@ -233,6 +228,7 @@
     add_action('admin_footer-edit.php','hidden_status_add_in_quick_edit');
     add_filter( 'display_post_states', 'display_archive_state_hidden' );
     add_action( 'admin_head', 'hidepoststatus' );
-    add_filter( 'wp_insert_post_data', 'prevent_post_change', 20, 2 );
+    add_filter('wp_insert_post_data' , 'dont_publish' , '99', 2); 
+
 
 ?>
