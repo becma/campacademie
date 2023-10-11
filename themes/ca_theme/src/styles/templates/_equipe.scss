@@ -16,4 +16,18 @@
             justify-content: space-evenly;
         }
     }
+
+    [becma-slider].cards-container {
+        .becma-arrow-left {
+            left: 22px;         
+        }
+
+        .becma-arrow-right {
+            right: 22px;
+        }
+
+        [class*="becma-arrow"] {
+            bottom: 12px;
+        }
+    }
 }
