@@ -6,7 +6,7 @@
     <div class="ratios-content">
         <h2><?php the_field('titre_section-table'); ?></h2>
         <div class="ratios-content-infos">
-            <div class="radios-content-image">
+            <div class="ratios-content-image">
                 <img src="<?php echo esc_url($image['url']); ?>" alt="">
             </div>
             <div class="ratios-content-table-container">

@@ -1,5 +1,9 @@
 .ratios {
-    margin: 70px;
+    margin: 70px 0;
+
+    @media #{$medium-plus} {
+        margin: 70px;
+    }
 
     &-content {
 
@@ -8,16 +12,31 @@
         }
 
         &-infos {
+            margin-top: 60px;
             display: flex;
             align-items: center;
-            margin-top: 60px;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+
+        &-image {
+            min-width: 300px;
+            margin: 0 50px;
+
+            @media #{$large-plus} {
+            }
         }
 
         &-table-container {
             background-color: white;
             border: 1px solid $mauve-ca;
             color: black;
-            margin: 30px auto;
+            margin: 50px auto;
             padding: 30px;
             width: fit-content;
         }

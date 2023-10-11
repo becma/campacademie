@@ -3,6 +3,7 @@ const cityBtnsMob = document.querySelector('.site-list-content-filter select');
 const cityBtnsMobOptions = document.querySelector('.site-list-content-filter select option');
 const siteCards = document.querySelectorAll('.site-card');
 const navBtn = document.querySelector('.nav-btn');
+const navCont = document.querySelector('.menu-header-container');
 
 const controlArrow = () => {
     if (cityBtnsMob.classList.contains('active')) {
@@ -38,6 +39,7 @@ const filterSites = (event) => {
             siteCard.style.display = 'none';
         }
     });
+}
 
 const openCloseMenu = (event) => {
     console.log(event.currentTarget);
@@ -141,6 +143,10 @@ const becmaSetArrows = (slider, slidesToScroll, sliderWidth) => {
         })
     }
 }
+
+navBtn.addEventListener('click', (event) => {
+    openCloseMenu(event);
+})
 
 cityBtnsDesk.forEach((btn) => {
     btn.addEventListener('click', filterSites);
