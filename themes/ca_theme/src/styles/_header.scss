@@ -129,18 +129,20 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 145px;
-        width: 145px;
-        top: 20px;
+        height: 120px;
+        width: 120px;
+        top: 0;
         left: 50%;
         transform: translateX(-50%);
 
         @media #{$medium-plus} {
+            height: 145px;
+            width: 145px;
             top: 30px;
         }
 
         @media #{$large-plus} {
-            top: 50px;
+            top: 20px;
             left: 50px;
             transform: translateX(0%);
         }
@@ -149,7 +151,11 @@
         img {
             display: block;
             height: auto;
-            width: 120px;
+            width: 100px;
+
+            @media #{$medium-plus} {
+                width: 120px;
+            }
         }
     }
 }
