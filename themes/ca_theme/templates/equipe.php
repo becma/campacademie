@@ -41,7 +41,7 @@
 <section class="equipe <?php if ($section_grey = true) {echo "-grey-section";} ?>">
     <div class="equipe-content">
         <h2><?php the_field('equipe_title'); ?></h2>
-        <div class="cards-container" becma-slider slides-active=2 slides-to-scroll=2 automatic-width>
+        <div class="cards-container" becma-slider slides-active="3" slides-to-scroll="1" automatic-width>
             <?php get_template_part(
                 'templates/equipe-card', 
                 null, 

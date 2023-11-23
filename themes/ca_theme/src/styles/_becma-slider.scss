@@ -9,22 +9,17 @@
 
 [becma-slider] {
     position: relative;
+    overflow: hidden;
 
     .becma-slides {
         display: flex;
-
-        > .becma-slide {
-            visibility: hidden;
-
-            &.slide-active {
-                visibility: visible;
-            }
-        }
+        transition: all 0.5s ease-in-out;
     }
 
-    [class*="becma-arrow"]:not([class$="btn"]) {
+    [class*="becma-arrow"]:not(button) {
         position: absolute;
         bottom: 0;
+        z-index: 1;
 
         [class*="btn"] {
             @include button-reset;
@@ -38,6 +33,14 @@
             font-size: 50px;
             padding: 35px;
             width: 60px;
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.5s linear;
+
+            &.arrow-disabled {
+                visibility: hidden;
+                opacity: 0;
+            }
         }
 
         &.becma-arrow-left {

@@ -55,7 +55,7 @@
             "label": "Image",
             "name": "camp_image",
             "aria-label": "",
-            "type": "text",
+            "type": "image",
             "instructions": "",
             "required": 1,
             "conditional_logic": [
@@ -72,11 +72,16 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -97,5 +102,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1695786855
+    "modified": 1696992854
 }
