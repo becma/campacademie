@@ -20,10 +20,8 @@ const filterSites = (event) => {
     });
 
     let chosenCity;
-    console.log(event.target.type);
 
     if (event.target.type === 'submit') {
-        console.log('button');
         chosenCity = event.target.getAttribute('data-city');
         event.target.classList.add('active');
     } else {
@@ -42,18 +40,13 @@ const filterSites = (event) => {
 }
 
 const openCloseMenu = (event) => {
-    console.log(event.currentTarget);
-    console.log(navBtn.lastChild);
-    console.log(navBtn);
     if (navCont.classList.contains('active')) {
-        console.log('nav was active');
         navCont.classList.remove('active');
         event.currentTarget.querySelector('.fa-bars').classList.add('-active');
         event.currentTarget.querySelector('.fa-x').classList.remove('-active');
         navBtn.setAttribute('aria-label', 'Ouvrir le menu');
     } else {
         navCont.classList.add('active');
-        console.log('nav wasnt active');
         navBtn.setAttribute('aria-label', 'Fermer le menu');
         event.currentTarget.querySelector('.fa-bars').classList.remove('-active');
         event.currentTarget.querySelector('.fa-x').classList.add('-active');
@@ -64,36 +57,25 @@ const getComputedStyles = (el) => {
     return window.getComputedStyle ? getComputedStyle(el, null) : el.currentStyle;
 }
 
-const becmaSliderHandler = () => {
-    console.log('carousel gen');
+const becmaSliderHandler = (slidesToShow, slidesToScroll) => {
     const becmaSlider = document.querySelector('[becma-slider]');
     const slides = becmaSlider.innerHTML;
     const slidesCont = '<div class="becma-slides">' + slides + '</div>';
     becmaSlider.innerHTML = slidesCont;
     const becmaSlidesTrack = document.querySelector('.becma-slides');
     const becmaSliderSlides = Array.from(becmaSlidesTrack.children);
-    console.log(becmaSliderSlides);
-    const slidesToShow = becmaSlider.getAttribute('slides-active') ? becmaSlider.getAttribute('slides-active') : -1;
-    const slidesToScroll = becmaSlider.getAttribute('slides-to-scroll') ? becmaSlider.getAttribute('slides-to-scroll') : -1;
+    const becmaSlidesToScroll = slidesToScroll ? slidesToScroll : becmaSlider.getAttribute('slides-to-scroll') ? becmaSlider.getAttribute('slides-to-scroll') : -1;
     const automaticWidth = becmaSlider.hasAttribute('automatic-width');
-    console.log(automaticWidth);
     let biggestSlideWidth = 0;
 
-    console.log(slidesToShow);
-
     becmaSliderSlides.forEach(slide => {
-        console.log(slide);
         slide.classList.add('becma-slide');
         slideStyles = getComputedStyles(slide);
         let slideWidth = slide.offsetWidth + parseInt(slideStyles.marginLeft) + parseInt(slideStyles.marginRight);
-        console.log(slideWidth);
-        console.log(parseInt(slideStyles.marginLeft));
 
         if (slide.clientWidth > biggestSlideWidth) {
             biggestSlideWidth = slideWidth;
         }
-
-        console.log(becmaSliderSlides.indexOf(slide));
 
         if ( becmaSliderSlides.indexOf(slide) > -1 && becmaSliderSlides.indexOf(slide)  <= (slidesToShow -1) ) {
             slide.classList.add('slide-active');
@@ -106,7 +88,16 @@ const becmaSliderHandler = () => {
         becmaSlidesTrack.style.width = becmaSliderWidth + 'px';
     }
 
-    becmaSetArrows(becmaSlider, slidesToScroll, becmaSliderWidth);
+    becmaSetArrows(becmaSlider, becmaSlidesToScroll, becmaSliderWidth);
+
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            handleResponsive(becmaSlider)
+        }, 200);
+    });
+
 }
 
 const becmaSetArrows = (slider, slidesToScroll) => {
@@ -118,7 +109,7 @@ const becmaSetArrows = (slider, slidesToScroll) => {
     if (!becmaLeftArrow) {
         let leftArrowCont = document.createElement('div');
         let leftArrow = document.createElement('button')
-        leftArrowCont.classList.add('becma-arrow-left');
+        leftArrowCont.className = ('becma-arrow becma-arrow-left');
         leftArrow.classList.add('becma-arrow-left-btn');
         leftArrow.innerHTML = '<i class="fa-solid fa-angle-left aria-hidden="true"></i>'
         leftArrowCont.appendChild(leftArrow);
@@ -129,7 +120,7 @@ const becmaSetArrows = (slider, slidesToScroll) => {
     if (!becmaRightArrow) {
         let rightArrowCont = document.createElement('div');
         let rightArrow = document.createElement('button')
-        rightArrowCont.classList.add('becma-arrow-right');
+        rightArrowCont.className = ('becma-arrow becma-arrow-right');
         rightArrow.classList.add('becma-arrow-right-btn');
         rightArrow.innerHTML = '<i class="fa-solid fa-angle-right aria-hidden="true"></i>'
         rightArrowCont.appendChild(rightArrow);
@@ -145,7 +136,6 @@ const becmaSetArrows = (slider, slidesToScroll) => {
 
         const becmaSliderArrows = slider.querySelectorAll('[class$="btn"]');
         handleArrowsVisibility(slider.querySelector('.becma-slides'), becmaLeftArrow, becmaRightArrow);
-        console.log(becmaSliderArrows);
 
         becmaSliderArrows.forEach((btn) => {
             btn.addEventListener('click', () => {
@@ -160,8 +150,6 @@ const becmaSetArrows = (slider, slidesToScroll) => {
                     transform = "translateX(" + transformVal + "px)";
                     activeSlides[activeSlides.length -1].classList.remove('slide-active');
                     prevSlide.classList.add('slide-active');
-                    console.log(becmaSlidesCont.querySelectorAll('.slide-active')[0]);
-                    console.log(becmaSlidesCont.firstChild);
                 } else if (btnClass.contains('becma-arrow-right-btn')) {
                     activeSlides = slider.querySelectorAll('.becma-slides .slide-active');
                     nextSlide = activeSlides[(activeSlides.length - 1)].nextElementSibling;
@@ -184,10 +172,7 @@ const becmaSetArrows = (slider, slidesToScroll) => {
 }
 
 const handleArrowsVisibility = (becmaSlidesCont, becmaLeftArrow, becmaRightArrow) => {
-    console.log(becmaSlidesCont.querySelectorAll('.slide-active')[0]);
-    console.log(becmaSlidesCont.querySelectorAll('.becma-slide')[0]);
     if (becmaSlidesCont.querySelectorAll('.slide-active')[0] === becmaSlidesCont.querySelectorAll('.becma-slide')[0]) {
-        console.log("yup");
         becmaLeftArrow.classList.add('arrow-disabled');
     } else {
         becmaLeftArrow.classList.remove('arrow-disabled');
@@ -199,6 +184,44 @@ const handleArrowsVisibility = (becmaSlidesCont, becmaLeftArrow, becmaRightArrow
     } else {
         becmaRightArrow.classList.remove('arrow-disabled');
     }
+}
+
+const handleResponsive = (slider) => {
+    const breakpoints = slider.getAttribute('breakpoints').replaceAll("'", '"');
+    const breakpointsObject = JSON.parse(breakpoints);
+    const breakpointsObjectElements = Object.keys(breakpointsObject).sort((a, b) => parseFloat(a) - parseFloat(b));
+    let slidesToShow;
+
+    for (let breakpoint of breakpointsObjectElements) {
+
+        if (breakpoint > window.innerWidth) {
+            let slidesToShow = breakpointsObject[breakpoint]['slidesToShow'];
+
+            killSlider(slider);
+            becmaSliderHandler(slidesToShow);
+            break;
+        } else {
+            slidesToShow = slider.getAttribute('slides-active') ? slider.getAttribute('slides-active') : -1;
+
+            killSlider(slider);
+            becmaSliderHandler(slidesToShow);
+        }
+    }
+}
+
+const killSlider = (slider) => {
+    slides = slider.querySelector('.becma-slides').children;
+    slidesArray = Array.from(slides);
+    slider.querySelector('.becma-slides').remove();
+    const arrows = slider.querySelectorAll('.becma-arrow');
+    arrows.forEach((arrow) => {
+        arrow.remove();
+    })
+    slidesArray.forEach((slide) => {
+        slide.classList.remove('slide-active');
+        slider.append(slide);
+    })
+
 }
 
 navBtn.addEventListener('click', (event) => {
@@ -222,4 +245,5 @@ navBtn.addEventListener('click', () => {
  */
 onload = event => {
     becmaSliderHandler();
+    handleResponsive(document.querySelector('[becma-slider]'));
 };
