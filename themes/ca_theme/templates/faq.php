@@ -1,7 +1,7 @@
 <?php include get_template_directory() . '/global-info.php' ?>
 
 <?php
-    $grey_section = get_field('faq_gris') ;
+    $grey_section = !empty(get_field('faq_gris')) ? get_field('faq_gris') : get_field('faq_gris', $sites_global);
     $faq_title = !empty(get_field('faq_title')) ? get_field('faq_title') : get_field('faq_title', $sites_global);
 ?>
 
