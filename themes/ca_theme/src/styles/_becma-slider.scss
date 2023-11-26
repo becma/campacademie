@@ -1,0 +1,54 @@
+@import 'variables';
+
+@mixin button-reset {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+[becma-slider] {
+    position: relative;
+    overflow: hidden;
+
+    .becma-slides {
+        display: flex;
+        transition: all 0.5s ease-in-out;
+    }
+
+    [class*="becma-arrow"]:not(button) {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+
+        [class*="btn"] {
+            @include button-reset;
+            border: 5px solid $mauve-ca;
+            border-radius: 50%;
+            color: $mauve-ca;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            font-size: 50px;
+            padding: 35px;
+            width: 60px;
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.5s linear;
+
+            &.arrow-disabled {
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+
+        &.becma-arrow-left {
+            left: 0;
+        }
+
+        &.becma-arrow-right {
+            right: 0;
+        }
+    }
+}
