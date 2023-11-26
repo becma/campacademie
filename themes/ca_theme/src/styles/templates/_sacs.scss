@@ -1,0 +1,45 @@
+.sacs {
+    &-content {
+        padding: 0 15px;
+    
+        &-dans {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+
+            @media #{$medium-plus} {
+                flex-direction: row;
+                align-items: stretch;
+            }
+
+            > div {
+                
+                border: 2px solid $mauve_ca;
+                max-width: 520px;
+
+                @media #{$medium-plus} {
+                    width: 50%;
+                }
+
+                h3 {
+                    background-color: $mauve-ca;
+                    color: white;
+                    font: 400 2rem $barlow;
+                    margin: 0;
+                    padding: 20px;
+                    text-align: center;
+                }
+
+                > div {
+                    margin: 20px;
+                }
+            }
+        }
+
+        &-allergies {
+            margin: 50px auto;
+        }
+    }
+}

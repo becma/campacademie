@@ -9,30 +9,6 @@
         flex-wrap: wrap;
 
         &-absence, &-questions {
-            background: #{$rouge_ca + '30'};
-            border: 3px solid $rouge_ca;
-            display: flex;
-            align-items: center;
-            margin: 20px;
-            padding: 20px 40px 20px 60px;
-            position: relative;
-            min-height: 160px;
-            max-width: 600px;
-
-            &:before {
-                content: '!';
-                color: $rouge-ca;
-                position: absolute;
-                left: 10px;
-                top: 0;
-                font-size: 150px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                height: 100%;
-                margin-top: -10px;
-            }
-
             a {
                 font-size: 1.6rem;
                 text-decoration: underline;

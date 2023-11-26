@@ -61,6 +61,26 @@
             "media_upload": 1,
             "default_value": "",
             "delay": 0
+        },
+        {
+            "key": "field_65639e8978c56",
+            "label": "Allergies - mémo",
+            "name": "allergies_memo",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
@@ -69,6 +89,13 @@
                 "param": "post",
                 "operator": "==",
                 "value": "552"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "sites"
             }
         ]
     ],
@@ -81,5 +108,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1696894016
+    "modified": 1701027490
 }
