@@ -34,7 +34,7 @@ main {
             margin: 0 15px ;
             max-width: 1440px;
 
-            @media #{$small-plus} {
+            @media #{$medium-plus} {
                 margin: 0 auto;
             }
         }
@@ -45,7 +45,7 @@ main {
     }
 }
 
-ul {
+ul .nopnom {
     margin: 0;
     padding: 0;
 }

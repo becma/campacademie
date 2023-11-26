@@ -2,19 +2,29 @@
 
 <?php
     $section_grey = get_field('equipe-gris');
+    $page = get_the_ID();
 
-    $membre1 = get_field('membre1', $direction);
-    $membre2 = get_field('membre2', $direction);
-    $membre3 = get_field('membre3', $direction);
-    $membre4 = get_field('membre4', $direction);
-    $membre5 = get_field('membre5', $direction);
-    $membre6 = get_field('membre6', $direction);
+    if ($page === 8) {
+        $membre1 = get_field('membre1', $direction);
+        $membre2 = get_field('membre2', $direction);
+        $membre3 = get_field('membre3', $direction);
+        $membre4 = get_field('membre4', $direction);
+        $membre5 = get_field('membre5', $direction);
+        $membre6 = get_field('membre6', $direction);
+    } else {
+        $membre1 = get_field('membre1');
+        $membre2 = get_field('membre2');
+        $membre3 = get_field('membre3');
+        $membre4 = get_field('membre4');
+        $membre5 = get_field('membre5');
+        $membre6 = get_field('membre6');
+    }
 ?>
 
 <section class="equipe <?php if ($section_grey = true) {echo "-grey-section";} ?>">
     <div class="equipe-content">
         <h2><?php the_field('equipe_title'); ?></h2>
-        <div media="(min-width:1201px)" class="cards-container" becma-slider slides-active="3" slides-to-scroll="1" automatic-width breakpoints="{'1201': {'slidesToShow':'2'}, '708': {'slidesToShow': '1'} }">
+        <div media="(min-width:1201px)" class="cards-container" becma-slider slides-active="3" slides-to-scroll="1" automatic-width breakpoints="{'1201': {'slidesToShow':'2'}, '801': {'slidesToShow': '1'} }">
             <?php 
                 if ($membre1 && $membre1['nom']) {
                     get_template_part(
