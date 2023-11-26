@@ -57,6 +57,8 @@ const getComputedStyles = (el) => {
     return window.getComputedStyle ? getComputedStyle(el, null) : el.currentStyle;
 }
 
+/************ DÉBUT BECMA SLIDER ************/
+
 const becmaSliderHandler = (slidesToShow, slidesToScroll) => {
     const becmaSlider = document.querySelector('[becma-slider]');
     const slides = becmaSlider.innerHTML;
@@ -224,6 +226,30 @@ const killSlider = (slider) => {
 
 }
 
+/************ FIN BECMA SLIDER ************/
+
+/************ DÉBUT FAQ ************/
+
+const handleFAQ = () => {
+    faqBtns = document.querySelectorAll('.faq .faq-block_question-btn');
+
+    if (faqBtns) {
+        faqBtns.forEach((faqBtn) => {
+
+            faqBtn.addEventListener('click', () => {
+                if (!faqBtn.classList.contains('active')) {
+                    faqBtn.classList.add('active');
+                } else {
+                    faqBtn.classList.remove('active');
+                }
+            })
+
+        })
+    }
+}
+
+/************ FIN FAQ ************/
+
 navBtn.addEventListener('click', (event) => {
     openCloseMenu(event);
 })
@@ -246,4 +272,5 @@ navBtn.addEventListener('click', () => {
 onload = event => {
     becmaSliderHandler();
     handleResponsive(document.querySelector('[becma-slider]'));
+    handleFAQ();
 };

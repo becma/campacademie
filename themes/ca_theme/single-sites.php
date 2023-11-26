@@ -36,6 +36,7 @@ Template Post Type: sites
     <?php get_template_part('/templates/infos_importantes'); ?>
     <?php get_template_part('/templates/equipe'); ?>
     <?php get_template_part('/templates/sacs'); ?>
+    <?php get_template_part('/templates/faq'); ?>
 </main>
 
 <?php get_footer(); ?>
