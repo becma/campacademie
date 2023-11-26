@@ -17,33 +17,35 @@
     $allergie = !empty(get_field('allergies_memo')) ? get_field('allergies_memo') : get_field('allergies_memo', $sites_global);
 ?>
 
-<section class="sacs <?php if ($sacs_section_grey === true) {echo "-grey-section";} ?>">
-    <div class="sacs-content">
-        <div class="sacs-content-dans">
-            <div class="sac-a-dos">
-                <h3>
-                    <?php echo $sac_titre ; ?>
-                </h3>
-                <div>
-                    <?php echo $sac_contenu; ?>
+<?php if (!empty($sac) || !empty($sac_global)) : ?>
+    <section class="sacs <?php if ($sacs_section_grey === true) {echo "-grey-section";} ?>">
+        <div class="sacs-content">
+            <div class="sacs-content-dans">
+                <div class="sac-a-dos">
+                    <h3>
+                        <?php echo $sac_titre ; ?>
+                    </h3>
+                    <div>
+                        <?php echo $sac_contenu; ?>
+                    </div>
+                </div>
+                <div class="boite-a-lunch">
+                    <h3>
+                        <?php echo $lunch_titre ; ?>
+                    </h3>
+                    <div>
+                        <?php echo $lunch_contenu; ?>
+                    </div>
                 </div>
             </div>
-            <div class="boite-a-lunch">
-                <h3>
-                    <?php echo $lunch_titre ; ?>
-                </h3>
-                <div>
-                    <?php echo $lunch_contenu; ?>
-                </div>
-            </div>
+            <?php
+                get_template_part('/templates/avertissement',
+                    null,
+                    array(
+                        'class' => 'sacs-content-allergies',
+                        'content' => $allergie,
+                    ))
+            ?>
         </div>
-        <?php
-            get_template_part('/templates/avertissement',
-                null,
-                array(
-                    'class' => 'sacs-content-allergies',
-                    'content' => $allergie,
-                ))
-        ?>
-    </div>
-</section>
+    </section>
+<?php endif; ?>
