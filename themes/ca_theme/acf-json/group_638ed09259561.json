@@ -1,6 +1,6 @@
 {
     "key": "group_638ed09259561",
-    "title": "Formulaire",
+    "title": "Formulaire Contact",
     "fields": [
         {
             "key": "field_638ed092bd74f",
@@ -50,6 +50,20 @@
                 "operator": "==",
                 "value": "6"
             }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "sites.php"
+            }
+        ],
+        [
+            {
+                "param": "post",
+                "operator": "==",
+                "value": "552"
+            }
         ]
     ],
     "menu_order": 0,
@@ -61,5 +75,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1693354220
+    "modified": 1701229163
 }

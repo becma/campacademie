@@ -1,6 +1,12 @@
 .contact {
     &-content {
         padding: 50px;
+
+        .site-page & {
+            h2 {
+                text-align: center;
+            }
+        }
         
         form {
             width: 80%;
