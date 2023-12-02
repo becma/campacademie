@@ -40,8 +40,9 @@
 
             .cta.green {
                 background-color: $vert-ca !important;
-                border: none;
+                border: none !important;
                 color: black !important;
+                cursor: pointer;
                 display: block;
                 font-size: 3rem !important;
                 max-width: 700px;
@@ -56,29 +57,32 @@
             }
         }
 
-        .wpforms-field-container {
+        .infos-persos {
             @media #{$medium-plus} {
                 display: flex;
                 flex-wrap: wrap;
-            }
-        }
-        
-        .input-half {
-            width: 100% !important;
 
-            @media #{$medium-plus} {
-                flex-grow: 1;
-                width: 45% !important;
+                > p {
+                    flex-grow: 1;
 
-                &:nth-child(2) {
-                    margin-left: 15px !important;
+                    &:has(.input-half) {
+                        width: 100% !important;
+
+                        @media #{$medium-plus} {
+                            flex-grow: 1;
+                            width: 45% !important;
+            
+                            &:nth-child(2) {
+                                margin-left: 15px !important;
+                            }
+                        }
+                    }
                 }
             }
         }
 
         .input-fullwidth {
             flex-grow: 1;
-            margin: 20px 0;
         }
 
 
