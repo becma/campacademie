@@ -23,6 +23,28 @@
             "append": ""
         },
         {
+            "key": "field_656ac072390c0",
+            "label": "Durée",
+            "name": "duration",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_65139f4d66eee",
             "label": "Description",
             "name": "camp_description",
@@ -149,7 +171,7 @@
         {
             "key": "field_6513a5c82e831",
             "label": "Sites",
-            "name": "sites_",
+            "name": "sites_dispo",
             "aria-label": "",
             "type": "post_object",
             "instructions": "",
@@ -188,5 +210,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1695786484
+    "modified": 1701502308
 }

@@ -269,8 +269,225 @@ navBtn.addEventListener('click', () => {
 
 /* cityBtnsMob.addEventListener('click', controlArrow);
  */
+
+/************ DÉBUT FILTRES CAMPS ************/
+
+let filtersActive = false;
+let activeIds = [];
+let activeAges = [];
+
+const handleCampsFilters = (event) => {
+    const campsFiltersSection = document.getElementById('campsFilters');
+    
+    campsFiltersSection.classList.toggle('active');
+
+    if (campsFiltersSection.classList.contains('active')) {
+        event.target.innerText = 'FERMER LES FILTRES';
+    } else {
+        event.target.innerText = 'VOIR LES FILTRES';
+    }
+}
+
+const handleFilters = () => {
+    const nouveauFilter = document.getElementById('nouveauCamp');
+    const collaboFilter = document.getElementById('collaboCamp');
+    const categoriesFilters = document.querySelectorAll('.filtres-camps-content-filters-categories input');
+    const agesFilters = document.querySelectorAll('.filtres-camps-content-filters-ages input');
+
+    nouveauFilter.addEventListener('change', filterCards);
+
+    collaboFilter.addEventListener('change', filterCards);
+
+    categoriesFilters.forEach((categoryFilter) => {
+        categoryFilter.addEventListener('change', handleCategoriesFilter);
+    })
+
+    agesFilters.forEach((ageFilter) => {
+        ageFilter.addEventListener('change', handleAgesFilter);
+    })
+}
+
+const handleCategoriesFilter = (event) => {
+    if (event.target.checked) {
+        activeIds.push(event.target.value);
+    } else {
+        let idIndex = activeIds.indexOf(event.target.value);
+        if (idIndex > -1) {
+            activeIds.splice(idIndex, 1);
+        }
+    }
+
+    filterCards();
+}
+
+const handleAgesFilter = (event) => {
+    if (event.target.checked) {
+        activeAges.push(event.target.value);
+    } else {
+        let ageIndex = activeAges.indexOf(event.target.value);
+        if (ageIndex > -1) {
+            activeAges.splice(ageIndex, 1)
+        }
+    }
+
+    filterCards();
+}
+
+const filterCards = () => {
+    const campCards = document.querySelectorAll('.carte-camp');
+    const hasToBeNew = document.getElementById('nouveauCamp').checked;
+    const hasCollabo = document.getElementById('collaboCamp').checked; 
+
+    console.log(campCards);
+
+    campCards.forEach((campCard) => {
+        campCard.classList.add('hidden');
+        let isNew = campCard.getAttribute('data-new') === "1";
+        let isCollabo = campCard.getAttribute('data-collabo') !== null;
+        console.log(isCollabo);
+
+        const categories = campCard.getAttribute('data-categories').split(',');
+        const ages = campCard.getAttribute('data-age').split(',');
+
+        if (activeIds.length > 0 && activeAges.length <= 0) {
+            console.log('juste categorie');
+            categories.forEach((category) => {
+                activeIds.forEach((activeId) => {
+                    if (hasToBeNew) {
+                        console.log('hasToBeNew');
+                        if (category === activeId && isNew) {
+                            campCard.classList.remove('hidden');
+                        }
+                    } else if (hasCollabo) {
+                        if (category === activeId && isCollabo) {
+                            campCard.classList.remove('hidden')
+                        }
+                    } else if (hasCollabo && hasToBeNew) {
+                        if (category === activeId && isCollabo && isNew) {
+                            campCard.classList.remove('hidden');
+                        }
+                    } else {
+                        if (category === activeId) {
+                            campCard.classList.remove('hidden');
+                        }
+                    }
+                });
+            })
+        }
+
+        if (activeAges.length > 0 && activeIds.length <= 0) {
+            console.log('juste age');
+
+            ages.forEach((age) => {
+                activeAges.forEach((activeAge) => {
+                    console.log(activeAge);
+                    if (hasToBeNew) {
+                        console.log('hasToBeNew');
+                        if (age === activeAge && isNew) {
+                            campCard.classList.remove('hidden');
+                        }
+                    } else if (hasCollabo) {
+                        if (age === activeAge && isCollabo) {
+                            campCard.classList.remove('hidden')
+                        }
+                    } else if (hasCollabo && hasToBeNew) {
+                        if (age === activeAge && isCollabo && isNew) {
+                            campCard.classList.remove('hidden');
+                        }
+                    } else {
+                        if (age === activeAge) {
+                            campCard.classList.remove('hidden');
+                        }
+                    }
+                })
+            })
+        }
+
+        if (activeIds.length > 0 && activeAges.length > 0) {
+            console.log('les 2');
+
+            categories.forEach((category) => {
+                activeIds.forEach((activeId) => {
+                    if (hasToBeNew) {
+                        if (category === activeId && isNew) {
+                            ages.forEach((age) => {
+                                activeAges.forEach((activeAge) => {
+                                    if (age === activeAge) {
+                                        campCard.classList.remove('hidden');
+                                    }
+                                })
+                            })
+                        }
+                    } else if (hasCollabo) {
+                        if (category === activeId && isCollabo) {
+                            ages.forEach((age) => {
+                                activeAges.forEach((activeAge) => {
+                                    if (age === activeAge) {
+                                        campCard.classList.remove('hidden');
+                                    }
+                                })
+                            })
+                        }
+                    } else if (hasCollabo && hasToBeNew) {
+                        if (category === activeId && isCollabo && isNew) {
+                            ages.forEach((age) => {
+                                activeAges.forEach((activeAge) => {
+                                    if (age === activeAge) {
+                                        campCard.classList.remove('hidden');
+                                    }
+                                })
+                            })
+                        }
+                    } else {
+                        if (category === activeId) {
+                            ages.forEach((age) => {
+                                activeAges.forEach((activeAge) => {
+                                    if (age === activeAge) {
+                                        campCard.classList.remove('hidden');
+                                    }
+                                })
+                            })
+                        }
+                    }
+                });
+            })
+
+        }
+    })
+
+    if (activeIds.length <= 0 && activeAges.length <= 0 && !hasToBeNew && !hasCollabo) {
+        campCards.forEach((campCard) => {
+            campCard.classList.remove('hidden');
+        })
+    } else if (activeIds.length <= 0 && activeAges.length <= 0 && (hasToBeNew || hasCollabo)) {
+        campCards.forEach((campCard) => {
+            if (hasToBeNew && hasCollabo) {
+                if (campCard.getAttribute('data-new') === "1" && campCard.getAttribute('data-collabo') !== null) {
+                    campCard.classList.remove('hidden');
+                }
+            } else if (hasToBeNew) {
+                if (campCard.getAttribute('data-new') === "1") {
+                    campCard.classList.remove('hidden');
+                }
+            } else if (hasCollabo) {
+                if (campCard.getAttribute('data-collabo') !== null) {
+                    campCard.classList.remove('hidden');
+                }
+            }
+        })
+    }
+}
+
+const filterCampsSectionHandler = document.getElementById('campsFiltersHandler');
+
+filterCampsSectionHandler.addEventListener('click', handleCampsFilters);
+
+
+/************ FIN FILTRES CAMPS ************/
+
 onload = event => {
-    becmaSliderHandler();
-    handleResponsive(document.querySelector('[becma-slider]'));
+    // becmaSliderHandler();
+    // handleResponsive(document.querySelector('[becma-slider]'));
     handleFAQ();
+    handleFilters();
 };

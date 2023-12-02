@@ -1,0 +1,64 @@
+.filtres-camps {
+    &-content {
+        border: 1px solid $mauve-ca;
+        padding: 15px;
+
+        button {
+            @include button-reset;
+        }
+
+        &-header {
+            display: flex;
+            justify-content: center;
+            
+            h2 {
+                color: black;
+                font-size: 2rem;
+            }
+        }
+
+        &-filters {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.5s linear;
+
+            &.active {
+                max-height: 500px;
+            }
+
+            form {
+                margin: 20px;
+
+                fieldset {
+                    margin: 15px 0;
+
+                    label:has(input:checked) {
+                        background-color: $mauve-ca;
+                        color: white;
+                    }
+                }
+            }
+
+            h3 {
+                margin-bottom: 0;
+            }
+
+            label {
+                border: 1px solid $mauve-ca;
+                cursor: pointer;
+                display: inline-block;
+                margin: 5px;
+                padding: 5px;
+
+                &:hover {
+                    background-color: $grey-ca;
+                }
+
+                &.active {
+                    background-color: $mauve-ca;
+                    color: white;
+                }
+            }
+        }
+    }
+}

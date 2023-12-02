@@ -1,0 +1,126 @@
+.carte-camp {
+    border: 1px solid $mauve-ca;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 325px;
+    padding: 15px;
+    position: relative;
+    
+    &.hidden {
+        display: none;
+    }
+    
+    .pastille-nouveau {
+        background-color: $jaune-ca;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: -4.75rem;
+        top: -4.75rem;
+        height: 9.5rem;
+        width: 9.5rem;
+    }
+
+    .pastille-ado, .pastille-miniclub {
+        position: absolute;
+        top: 0;
+        text-align: right;
+        padding: 0 5px;
+        width: 100%;
+    }
+
+    .pastille-ado {
+        background-color: $rouge-ca;
+    }
+
+    .pastille-miniclub {
+        background-color: $vert-ca;
+    }
+
+    .intro {
+        text-align: center;
+        margin: 30px 0;
+        flex-grow: 1;
+
+        h2 {
+            color: $mauve-ca;
+            font-size: 3rem;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin: 0;
+
+            &.categorie {
+                text-transform: uppercase;
+            }
+
+            &.collabo {
+                color: $vert-ca;
+
+                a {
+                    color: $vert-ca;
+                    font-size: 1.6rem;
+                    text-decoration: underline;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .desc {
+        max-height: 5.25em;
+        overflow: hidden;
+
+        * {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;  
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .table-holder {
+        margin-top: 30px;
+        width: 100%;
+
+        table {
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+
+            th {
+                font-size: 1.8rem;
+                font-weight: normal;
+                
+                &:nth-child(2) {
+                    border-left: 1px solid $mauve-ca;
+                }
+            }
+
+            td {
+                color: $mauve-ca;
+                font-size: 1.8rem;
+
+                &:nth-child(2) {
+                    border-left: 1px solid $mauve-ca;
+                }
+            }
+        }
+    }
+
+    .lien-camp a {
+        display: block;
+        margin-top: 15px;
+    }
+}
