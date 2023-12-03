@@ -1,7 +1,9 @@
 .liste-camps {
     &-content {
         display: flex;
+        gap: 60px 50px;
         justify-content: space-evenly;
+        flex-wrap: wrap;
         margin-top: 80px;
     }
 }

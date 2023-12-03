@@ -10,7 +10,7 @@
         &-header {
             display: flex;
             justify-content: center;
-            
+
             h2 {
                 color: black;
                 font-size: 2rem;
@@ -23,18 +23,70 @@
             transition: all 0.5s linear;
 
             &.active {
-                max-height: 500px;
+                max-height: 1000px;
             }
 
             form {
-                margin: 20px;
+                @media #{$medium-plus} {
+                    margin: 20px;
+                }
 
                 fieldset {
                     margin: 15px 0;
+                    background-color: rgba($vert-ca, 0.1);
+                    border: none;
 
-                    label:has(input:checked) {
-                        background-color: $mauve-ca;
-                        color: white;
+                    @media #{$medium-plus} {
+                        
+                    }
+                    
+                    legend {
+                        font-weight: bold;
+                    }
+
+                    label {
+                        cursor: pointer;
+                        display: inline-block;
+                        margin: 5px 0;
+                        padding: 0 10px;
+
+                        span {
+                            border: 2px solid transparent;
+                            position: relative;
+                            padding: 3px;
+
+                            &::after {
+                                content: attr(data-text);
+                                height: 0;
+                                visibility: hidden;
+                                overflow: hidden;
+                                user-select: none;
+                                pointer-events: none;
+                                font-weight: bold;
+                                position: absolute;
+                            
+                                @media speech {
+                                display: none;
+                                }
+                            }
+                        }
+
+                        &:not(:last-of-type) {
+                            border-right: 1px solid $mauve-ca;
+                        }
+        
+                        &:hover, &:has(input:focus) {
+                            span {
+                                border-bottom-color: $mauve-ca;
+                            }
+                        }
+
+                        &:has(input:checked) {
+                            span {
+                                background-color: rgba($vert-ca, 0.5);
+                                font-weight: bold;
+                            }
+                        }
                     }
                 }
             }
@@ -43,22 +95,7 @@
                 margin-bottom: 0;
             }
 
-            label {
-                border: 1px solid $mauve-ca;
-                cursor: pointer;
-                display: inline-block;
-                margin: 5px;
-                padding: 5px;
 
-                &:hover {
-                    background-color: $grey-ca;
-                }
-
-                &.active {
-                    background-color: $mauve-ca;
-                    color: white;
-                }
-            }
         }
     }
 }

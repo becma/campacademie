@@ -70,7 +70,8 @@
                 "scientifique": "Camp scientifique",
                 "anglais": "Camp d'anglais",
                 "formation": "Camp de formation",
-                "voile": "Camp de voile"
+                "voile": "Camp de voile",
+                "linguistique": "Camp linguistique"
             },
             "default_value": false,
             "return_format": "value",
@@ -99,5 +100,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1696998082
+    "modified": 1701556181
 }

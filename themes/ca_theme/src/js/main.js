@@ -282,9 +282,9 @@ const handleCampsFilters = (event) => {
     campsFiltersSection.classList.toggle('active');
 
     if (campsFiltersSection.classList.contains('active')) {
-        event.target.innerText = 'FERMER LES FILTRES';
+        event.currentTarget.querySelector('h2').innerText = event.currentTarget.getAttribute('data-close-label');
     } else {
-        event.target.innerText = 'VOIR LES FILTRES';
+        event.currentTarget.querySelector('h2').innerText = event.currentTarget.getAttribute('data-open-label');
     }
 }
 
