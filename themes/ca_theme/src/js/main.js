@@ -486,8 +486,12 @@ filterCampsSectionHandler.addEventListener('click', handleCampsFilters);
 /************ FIN FILTRES CAMPS ************/
 
 onload = event => {
-    becmaSliderHandler();
-    handleResponsive(document.querySelector('[becma-slider]'));
+
+    if (document.querySelector('[becma-slider]')) {
+        becmaSliderHandler();
+        handleResponsive(document.querySelector('[becma-slider]'));
+    }
+    
     handleFAQ();
     handleFilters();
 };
