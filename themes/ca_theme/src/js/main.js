@@ -480,7 +480,9 @@ const filterCards = () => {
 
 const filterCampsSectionHandler = document.getElementById('campsFiltersHandler');
 
-filterCampsSectionHandler.addEventListener('click', handleCampsFilters);
+if (filterCampsSectionHandler) {
+    filterCampsSectionHandler.addEventListener('click', handleCampsFilters);
+}
 
 
 /************ FIN FILTRES CAMPS ************/
@@ -491,7 +493,7 @@ onload = event => {
         becmaSliderHandler();
         handleResponsive(document.querySelector('[becma-slider]'));
     }
-    
+
     handleFAQ();
     handleFilters();
 };
