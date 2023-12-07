@@ -490,10 +490,14 @@ if (filterCampsSectionHandler) {
 onload = event => {
 
     if (document.querySelector('[becma-slider]')) {
+        console.log('becmaslider!');
         becmaSliderHandler();
         handleResponsive(document.querySelector('[becma-slider]'));
     }
 
     handleFAQ();
-    handleFilters();
+
+    if (document.querySelector('.filtres-camps-content-filters')) {
+        handleFilters();
+    }
 };
