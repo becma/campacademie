@@ -1,12 +1,13 @@
 <?php include get_template_directory() . '/global-info.php' ?>
 
 <?php 
+    $postType = get_post_type();
     $section_grey = get_field('sacs-gris'); 
 
     $sac = get_field('sac');
-    $sac_global = get_field('sac', $sites_global);
+    $sac_global = $postType === "camps" ? get_field('sac', $camps_global) : get_field('sac', $sites_global);
     $lunch = get_field('lunch');
-    $lunch_global = get_field('lunch', $sites_global);
+    $lunch_global = $postType === "camps" ? get_field('lunch', $camps_global) : get_field('lunch', $sites_global);
 
     if (!empty($sac) || !empty($sac_global)) {
         $sac_titre = !empty($sac['titre']) ? $sac['titre'] : $sac_global['titre'];
@@ -22,7 +23,7 @@
 ?>
 
 <?php if (!empty($sac) || !empty($sac_global) || !empty($lunch) || !empty($lunch_global) || !empty($allergie)) : ?>
-    <section class="sacs <?php if ($sacs_section_grey === true) {echo "-grey-section";} ?>">
+    <section class="sacs <?php if ($section_grey === true) {echo "-grey-section";} ?>">
         <div class="sacs-content">
             <div class="sacs-content-dans">
                 <?php if (!empty($sac) || !empty($sac_global)) : ?>

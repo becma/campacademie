@@ -1,15 +1,17 @@
 <?php include get_template_directory() . '/global-info.php' ?>
 
 <?php
-    $grey_section = !empty(get_field('faq_gris')) ? get_field('faq_gris') : get_field('faq_gris', $sites_global);
-    $faq_title = !empty(get_field('faq_title')) ? get_field('faq_title') : get_field('faq_title', $sites_global);
+    $postType = get_post_type();
+    echo $postType;
+    $grey_section = !empty(get_field('faq_gris')) ? get_field('faq_gris') : ($postType === "camps" ? get_field('faq_gris', $camps_global) : get_field('faq_gris', $sites_global));
+    $faq_title = !empty(get_field('faq_title')) ? get_field('faq_title') : ($postType === "camps" ? get_field('faq_title', $camps_global) : get_field('faq_title', $sites_global));
 ?>
 
 <?php 
-    function createFaqBlock($faq_name) {
-        global $sites_global;
+    function createFaqBlock($faq_name, $camps_global, $sites_global) {
+        global $postType;
         $faq = get_field($faq_name);
-        $faq_global = get_field($faq_name, $sites_global);
+        $faq_global = $postType === "camps" ? get_field($faq_name, $camps_global) : get_field($faq_name, $sites_global);
         $question = !empty($faq['question']) ? $faq['question'] : $faq_global['question'] ;
         $reponse = !empty($faq['reponse']) ? $faq['reponse'] : $faq_global['reponse'] ;
 
@@ -27,15 +29,15 @@
 <section class="faq <?php if ($grey_section === true) {echo ' -grey-section'; } ?>">
     <div class="faq-content">
         <h2><?php echo $faq_title; ?></h2>
-        <?php createFaqBlock('question1');?>
-        <?php createFaqBlock('question2');?>
-        <?php createFaqBlock('question3');?>
-        <?php createFaqBlock('question4');?>
-        <?php createFaqBlock('question5');?>
-        <?php createFaqBlock('question6');?>
-        <?php createFaqBlock('question7');?>
-        <?php createFaqBlock('question8');?>
-        <?php createFaqBlock('question9');?>
-        <?php createFaqBlock('question10');?>
+        <?php createFaqBlock('question1', $camps_global, $sites_global);?>
+        <?php createFaqBlock('question2', $camps_global, $sites_global);?>
+        <?php createFaqBlock('question3', $camps_global, $sites_global);?>
+        <?php createFaqBlock('question4', $camps_global, $sites_global);?>
+        <?php createFaqBlock('question5', $camps_global, $sites_global);?>
+        <?php createFaqBlock('question6', $camps_global, $sites_global);?>
+        <?php createFaqBlock('question7', $camps_global, $sites_global);?>
+        <?php createFaqBlock('question8', $camps_global, $sites_global);?>
+        <?php createFaqBlock('question9', $camps_global, $sites_global);?>
+        <?php createFaqBlock('question10', $camps_global, $sites_global);?>
     </div>
 </section>
