@@ -2,7 +2,6 @@
 
 <?php
     $postType = get_post_type();
-    echo $postType;
     $grey_section = !empty(get_field('faq_gris')) ? get_field('faq_gris') : ($postType === "camps" ? get_field('faq_gris', $camps_global) : get_field('faq_gris', $sites_global));
     $faq_title = !empty(get_field('faq_title')) ? get_field('faq_title') : ($postType === "camps" ? get_field('faq_title', $camps_global) : get_field('faq_title', $sites_global));
 ?>
