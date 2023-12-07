@@ -270,7 +270,7 @@ navBtn.addEventListener('click', () => {
 /* cityBtnsMob.addEventListener('click', controlArrow);
  */
 onload = event => {
-    becmaSliderHandler();
-    handleResponsive(document.querySelector('[becma-slider]'));
+    //becmaSliderHandler();
+    //handleResponsive(document.querySelector('[becma-slider]'));
     handleFAQ();
 };

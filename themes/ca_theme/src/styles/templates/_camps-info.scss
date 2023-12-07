@@ -1,0 +1,140 @@
+.camps-infos {
+    margin: 50px auto;
+
+    @media #{$medium-plus} {
+        margin: 130px auto 50px;
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+
+        @media #{$medium-plus} {
+            flex-direction: row;
+
+            > div {
+                width: 50%;
+            }
+        }
+
+        &-desc {
+            margin-bottom: 30px;
+
+            &-text {
+                border-left: 5px solid $rouge-ca;
+                font-size: 1.7rem;
+                padding: 5px 30px;
+            }
+
+            table {
+                border-spacing: 0;
+                margin: 15px auto;
+                width: 100%;
+
+                td, th {
+                    padding: 0 20px;
+                    font-size: 2rem;
+                    font-weight: normal;
+                    text-align: center;
+                }
+
+                th {
+                    & span {
+                        padding-top: 5px;
+                    }
+                }
+
+                td {
+                    color: $mauve-ca;
+
+                    & span {
+                        padding-bottom: 5px;
+                    }
+                }
+
+                td:first-child, th:first-child {
+                    border-right: 1px solid $mauve-ca;
+                }
+
+                span {
+                    background-color: $grey-ca;
+                    display: inline-block;
+                    padding: 0 50px;
+                    width: 100%;
+                }
+            }
+
+            &-ctas-holder {
+
+                .select-site-holder {
+                    position: relative;
+                    width: fit-content;
+                    margin: 0 auto;
+
+                    select {
+                        -moz-appearance:none; /* Firefox */
+                        -webkit-appearance:none; /* Safari and Chrome */
+                        appearance:none;
+                        background: none;
+                        border: 3px solid transparent;
+                        border-bottom: 5px solid $vert-ca;
+                        font-size: 2rem;
+                        padding: 15px;
+                        position: relative;
+                        margin: 2px;
+                        min-width: 350px;
+                        z-index: 0;
+    
+                        &:focus {
+                            outline: 1px solid $mauve-ca;
+                        }
+    
+                        &.active + .fa-solid {
+                            transform: rotate(180deg) translateY(50%);
+                        }
+                    }
+    
+                    .fa-solid {
+                        font-size: 2rem;
+                        position: absolute;
+                        right: 15px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        transition: all 0.5s ease-in-out;
+                    }
+                }
+
+                .dispos-link {
+                    color: $mauve-ca;
+                    display: block;
+                    margin: 20px auto;
+                    text-align: center;
+                    text-decoration: underline;
+
+                    &:hover, &:focus {
+                        text-decoration: none;
+                    }
+
+                    &.hidden {
+                        visibility: hidden;
+                    }
+                }
+
+                .qidigo-link {
+                    display: block;
+                    margin: 0 auto;
+                    width: fit-content;
+
+                    &.hidden {
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+
+        &-media {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

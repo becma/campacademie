@@ -1,0 +1,55 @@
+.couts-camp {
+    padding: 50px 10px;
+
+    @media #{$medium-plus} {
+        padding: 100px;
+    }
+
+    &-content {
+        margin: 0 auto;
+
+        h2 {
+            text-align: center;
+
+            @media #{$medium-plus} {
+                text-align: left;
+            }
+        }
+
+        &-desc {
+            padding: 20px 50px;
+            font-size: 2rem;
+
+            @media #{$medium-plus} {
+                margin: 30px;
+            }
+        }
+
+        &-table {
+            background-color: white;
+            width: 100%;
+            padding: 10px;
+            margin: 0 auto;
+
+            @media #{$medium-plus} {
+                width: 90%;
+                padding: 20px 40px;
+            }
+            
+
+            table {
+                border-collapse: collapse;
+    
+                tr:not(:last-child) {
+                    border-bottom: 1px solid $mauve-ca;
+                }
+    
+                th, td {
+                    width: calc(100% / 6);
+                    text-align: center;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}

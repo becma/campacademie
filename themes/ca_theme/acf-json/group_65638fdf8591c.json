@@ -153,6 +153,20 @@
                 "operator": "==",
                 "value": "sites"
             }
+        ],
+        [
+            {
+                "param": "post",
+                "operator": "==",
+                "value": "723"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "camps"
+            }
         ]
     ],
     "menu_order": 0,
@@ -164,5 +178,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1701025515
+    "modified": 1701908347
 }
