@@ -2,7 +2,7 @@
     &-content {
         padding: 50px;
 
-        .site-page & {
+        .site-page &, .camp-page & {
             h2 {
                 text-align: center;
             }
