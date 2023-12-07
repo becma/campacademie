@@ -1,7 +1,7 @@
 <?php include get_template_directory() . '/global-info.php' ?>
 
 <?php
-    $title = !empty(get_field('contact_title')) ? get_field('contact_title') : get_field('contact_title', $sites_global);
+    $title = !empty(get_field('contact_title')) ? get_field('contact_title')  : (get_post_type() === "camps" ? get_field('contact_title', $camps_global) : get_field('contact_title', $sites_global));
     $section_grey = !empty(get_field('contact_grey')) ? get_field('contact_grey') : get_field('contact_grey', $sites_global);
 ?>
 
