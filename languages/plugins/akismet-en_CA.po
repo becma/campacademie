@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Akismet Anti-spam: Spam Protection - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-06-01 17:48:17+0000\n"
+"PO-Revision-Date: 2023-11-29 13:52:40+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,9 +11,105 @@ msgstr ""
 "Language: en_CA\n"
 "Project-Id-Version: Plugins - Akismet Anti-spam: Spam Protection - Stable (latest release)\n"
 
+#: views/stats.php:11
+msgid "Akismet detailed stats"
+msgstr "Akismet detailed stats"
+
+#: views/stats.php:6
+msgid "Back to settings"
+msgstr "Back to settings"
+
+#: views/config.php:259
+msgid "Subscription type"
+msgstr "Subscription type"
+
+#: views/config.php:222
+msgid "To help your site with transparency under privacy laws like the GDPR, Akismet can display a notice to your users under your comment forms."
+msgstr "To help your site with transparency under privacy laws like the GDPR, Akismet can display a notice to your users under your comment forms."
+
+#: views/config.php:149
+msgid "Spam filtering"
+msgstr "Spam filtering"
+
+#: views/config.php:92 views/enter.php:9
+msgid "API key"
+msgstr "API key"
+
+#: views/config.php:40
+msgid "Akismet stats"
+msgstr "Akismet stats"
+
+#. Author of the plugin
+msgid "Automattic - Anti-spam Team"
+msgstr "Automattic - Anti-spam Team"
+
+#. Plugin Name of the plugin
+msgid "Akismet Anti-spam: Spam Protection"
+msgstr "Akismet Anti-spam: Spam Protection"
+
+#: views/config.php:71
+msgid "Akismet is active and ready to stop spam. Your site&#8217;s spam statistics will be displayed here."
+msgstr "Akismet is active and ready to stop spam. Your site&#8217;s spam statistics will be displayed here."
+
+#: views/notice.php:51
+msgid "WP-Cron has been disabled using the DISABLE_WP_CRON constant. Comment rechecks may not work properly."
+msgstr "WP-Cron has been disabled using the DISABLE_WP_CRON constant. Comment rechecks may not work properly."
+
+#. translators: %1$s is a human-readable time difference, like "3 hours ago",
+#. and %2$s is an already-translated phrase describing how a comment's status
+#. changed, like "This comment was reported as spam."
+#: class.akismet-admin.php:700
+msgid "%1$s - %2$s"
+msgstr "%1$s - %2$s"
+
 #: views/get.php:17
 msgid "(opens in a new tab)"
 msgstr "(opens in a new tab)"
+
+#. translators: The placeholder is the name of a subscription level, like
+#. "Plus" or "Enterprise" .
+#: views/notice.php:321
+msgid "Upgrade to %s"
+msgstr "Upgrade to %s"
+
+#: views/notice.php:316
+msgid "Upgrade your subscription level"
+msgstr "Upgrade your subscription level"
+
+#: views/notice.php:276 views/notice.php:284 views/notice.php:292
+#: views/notice.php:301
+msgid "Learn more about usage limits."
+msgstr "Learn more about usage limits."
+
+#. translators: The first placeholder is a date, the second is a (formatted)
+#. number, the third is another formatted number.
+#: views/notice.php:268
+msgid "Since %1$s, your account made %2$s API calls, compared to your plan&#8217;s limit of %3$s."
+msgstr "Since %1$s, your account made %2$s API calls, compared to your plan&#8217;s limit of %3$s."
+
+#: views/notice.php:298
+msgid "Your Akismet usage has been over your plan&#8217;s limit for three consecutive months. We have restricted your account for the rest of the month. Upgrade your plan so Akismet can continue blocking spam."
+msgstr "Your Akismet usage has been over your plan&#8217;s limit for three consecutive months. We have restricted your account for the rest of the month. Upgrade your plan so Akismet can continue blocking spam."
+
+#: views/notice.php:289
+msgid "Your Akismet usage is nearing your plan&#8217;s limit for the third consecutive month. We will restrict your account after you reach the limit. Upgrade your plan so Akismet can continue blocking spam."
+msgstr "Your Akismet usage is nearing your plan&#8217;s limit for the third consecutive month. We will restrict your account after you reach the limit. Upgrade your plan so Akismet can continue blocking spam."
+
+#: views/notice.php:281
+msgid "Your Akismet usage has been over your plan&#8217;s limit for two consecutive months. Next month, we will restrict your account after you reach the limit. Please consider upgrading your plan."
+msgstr "Your Akismet usage has been over your plan&#8217;s limit for two consecutive months. Next month, we will restrict your account after you reach the limit. Please consider upgrading your plan."
+
+#: views/notice.php:255
+msgid "Your account has been restricted"
+msgstr "Your account has been restricted"
+
+#: views/notice.php:251
+msgid "Your Akismet account usage is approaching your plan&#8217;s limit"
+msgstr "Your Akismet account usage is approaching your plan&#8217;s limit"
+
+#: views/notice.php:248
+msgid "Your Akismet account usage is over your plan&#8217;s limit"
+msgstr "Your Akismet account usage is over your plan&#8217;s limit"
 
 #. translators: The placeholder is a URL to the Akismet contact form.
 #: views/notice.php:211
@@ -148,6 +244,10 @@ msgstr "Manual Configuration"
 #: class.akismet-admin.php:247
 msgid "On this page, you are able to update your Akismet settings and view spam stats."
 msgstr "On this page, you are able to update your Akismet settings and view spam stats."
+
+#: class.akismet-admin.php:114 class.akismet-admin.php:117
+msgid "Akismet Anti-spam"
+msgstr "Akismet Anti-spam"
 
 #: views/enter.php:10
 msgid "Connect with API key"
@@ -474,6 +574,10 @@ msgstr "Suspended"
 #: views/config.php:269
 msgid "Cancelled"
 msgstr "Cancelled"
+
+#: views/config.php:239
+msgid "Save changes"
+msgstr "Save changes"
 
 #: views/config.php:231
 msgid "Disconnect this account"

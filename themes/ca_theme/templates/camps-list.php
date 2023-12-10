@@ -5,7 +5,9 @@
         <?php   
             $camp = get_posts(array(
                 'post_type' => 'camps',
-                'numberposts' => -1
+                'numberposts' => -1,
+                'orderby' => 'title',
+                'order' => 'ASC'
             )) ;
         ?>
 
