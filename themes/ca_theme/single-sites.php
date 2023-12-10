@@ -5,6 +5,7 @@ Template Post Type: sites
 */
 ?>
 <?php include get_template_directory() . '/global-info.php' ?>
+<?php $hasVideo = get_field('hasVideo'); ?>
 
 <?php get_header(); ?>
 
@@ -35,6 +36,7 @@ Template Post Type: sites
     <?php get_template_part('/templates/site_info'); ?>
     <?php get_template_part('/templates/infos_importantes'); ?>
     <?php get_template_part('/templates/equipe'); ?>
+    <?php if ($hasVideo) {get_template_part('/templates/single-video');} ?>
     <?php get_template_part('/templates/sacs'); ?>
     <?php get_template_part('/templates/faq'); ?>
     <?php get_template_part('/templates/contact'); ?>

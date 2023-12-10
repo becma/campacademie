@@ -30,8 +30,8 @@ main {
     section {
         margin: 50px 0;
 
-        & > div {
-            margin: 0 15px ;
+        &>div {
+            margin: 0 15px;
             max-width: 1440px;
 
             @media #{$medium-plus} {
@@ -66,7 +66,8 @@ h2 {
     }
 }
 
-a, button {
+a,
+button {
     color: black;
     font-size: 1.75rem;
     text-decoration: none;
@@ -92,7 +93,8 @@ a, button {
             color: white;
         }
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             background-color: $mauve-ca !important;
             color: white !important;
             text-decoration: underline;
@@ -102,7 +104,8 @@ a, button {
     &[class*='cta-2'] {
         text-decoration: underline;
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             background-color: transparent !important;
             color: black !important;
             text-decoration: none;
@@ -124,4 +127,8 @@ a, button {
 h4 {
     margin: 0;
     font-size: 2rem;
+}
+
+iframe {
+    display: block;
 }
