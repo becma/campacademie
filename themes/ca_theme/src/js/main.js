@@ -15,7 +15,7 @@ const controlArrow = () => {
 
 const filterSites = (event) => {
 
-    cityBtnsDesk.forEach ((btn) => {
+    cityBtnsDesk.forEach((btn) => {
         btn.classList.remove('active');
     });
 
@@ -79,7 +79,7 @@ const becmaSliderHandler = (slidesToShow, slidesToScroll) => {
             biggestSlideWidth = slideWidth;
         }
 
-        if ( becmaSliderSlides.indexOf(slide) > -1 && becmaSliderSlides.indexOf(slide)  <= (slidesToShow -1) ) {
+        if (becmaSliderSlides.indexOf(slide) > -1 && becmaSliderSlides.indexOf(slide) <= (slidesToShow - 1)) {
             slide.classList.add('slide-active');
         }
     })
@@ -118,7 +118,7 @@ const becmaSetArrows = (slider, slidesToScroll) => {
         slider.prepend(leftArrowCont);
         becmaLeftArrow = slider.querySelector('.becma-arrow-left-btn');
     }
-  
+
     if (!becmaRightArrow) {
         let rightArrowCont = document.createElement('div');
         let rightArrow = document.createElement('button')
@@ -150,7 +150,7 @@ const becmaSetArrows = (slider, slidesToScroll) => {
                     prevSlideWidth = prevSlide.clientWidth + parseInt(prevSlideStyles.marginLeft) + parseInt(prevSlideStyles.marginRight);
                     transformVal += Math.abs(prevSlideWidth);
                     transform = "translateX(" + transformVal + "px)";
-                    activeSlides[activeSlides.length -1].classList.remove('slide-active');
+                    activeSlides[activeSlides.length - 1].classList.remove('slide-active');
                     prevSlide.classList.add('slide-active');
                 } else if (btnClass.contains('becma-arrow-right-btn')) {
                     activeSlides = slider.querySelectorAll('.becma-slides .slide-active');
@@ -169,7 +169,7 @@ const becmaSetArrows = (slider, slidesToScroll) => {
             });
         });
 
-            // TODO: Add slidetoscroll to slide-active class handling
+        // TODO: Add slidetoscroll to slide-active class handling
     }
 }
 
@@ -180,8 +180,8 @@ const handleArrowsVisibility = (becmaSlidesCont, becmaLeftArrow, becmaRightArrow
         becmaLeftArrow.classList.remove('arrow-disabled');
     }
 
-               
-    if (document.querySelectorAll('.slide-active')[document.querySelectorAll('.slide-active').length -1] === becmaSlidesCont.querySelectorAll('.becma-slide')[becmaSlidesCont.querySelectorAll('.becma-slide').length -1]) {
+
+    if (document.querySelectorAll('.slide-active')[document.querySelectorAll('.slide-active').length - 1] === becmaSlidesCont.querySelectorAll('.becma-slide')[becmaSlidesCont.querySelectorAll('.becma-slide').length - 1]) {
         becmaRightArrow.classList.add('arrow-disabled');
     } else {
         becmaRightArrow.classList.remove('arrow-disabled');
@@ -273,12 +273,13 @@ navBtn.addEventListener('click', () => {
 /************ DÉBUT FILTRES CAMPS ************/
 
 let filtersActive = false;
-let activeIds = [];
+let activeSites = [];
+let activeCategories = [];
 let activeAges = [];
 
 const handleCampsFilters = (event) => {
     const campsFiltersSection = document.getElementById('campsFilters');
-    
+
     campsFiltersSection.classList.toggle('active');
 
     if (campsFiltersSection.classList.contains('active')) {
@@ -291,12 +292,17 @@ const handleCampsFilters = (event) => {
 const handleFilters = () => {
     const nouveauFilter = document.getElementById('nouveauCamp');
     const collaboFilter = document.getElementById('collaboCamp');
+    const sitesFilters = document.querySelectorAll('.filtres-camps-content-filters-sites input');
     const categoriesFilters = document.querySelectorAll('.filtres-camps-content-filters-categories input');
     const agesFilters = document.querySelectorAll('.filtres-camps-content-filters-ages input');
 
     nouveauFilter.addEventListener('change', filterCards);
 
     collaboFilter.addEventListener('change', filterCards);
+
+    sitesFilters.forEach((siteFilter) => {
+        sitesFilter.addEventListener('change', handleSitesFilter);
+    })
 
     categoriesFilters.forEach((categoryFilter) => {
         categoryFilter.addEventListener('change', handleCategoriesFilter);
@@ -307,13 +313,26 @@ const handleFilters = () => {
     })
 }
 
+const handleSitesFilter = (event) => {
+    if (event.target.checked) {
+        activeSites.push(event.target.value);
+    } else {
+        let siteIndex = activeSites.indexOf(event.target.value);
+        if (siteIndex > -1) {
+            activeSites.splice(siteIndex, 1);
+        }
+    }
+
+    filterCards();
+}
+
 const handleCategoriesFilter = (event) => {
     if (event.target.checked) {
-        activeIds.push(event.target.value);
+        activeCategories.push(event.target.value);
     } else {
-        let idIndex = activeIds.indexOf(event.target.value);
+        let idIndex = activeCategories.indexOf(event.target.value);
         if (idIndex > -1) {
-            activeIds.splice(idIndex, 1);
+            activeCategories.splice(idIndex, 1);
         }
     }
 
@@ -336,7 +355,7 @@ const handleAgesFilter = (event) => {
 const filterCards = () => {
     const campCards = document.querySelectorAll('.carte-camp');
     const hasToBeNew = document.getElementById('nouveauCamp').checked;
-    const hasCollabo = document.getElementById('collaboCamp').checked; 
+    const hasCollabo = document.getElementById('collaboCamp').checked;
 
     console.log(campCards);
 
@@ -346,13 +365,14 @@ const filterCards = () => {
         let isCollabo = campCard.getAttribute('data-collabo') !== null;
         console.log(isCollabo);
 
+        const sites = campCard.getAttribute('data-sites').split(',');
         const categories = campCard.getAttribute('data-categories').split(',');
         const ages = campCard.getAttribute('data-age').split(',');
 
-        if (activeIds.length > 0 && activeAges.length <= 0) {
+        if (activeCategories.length > 0 && activeAges.length <= 0) {
             console.log('juste categorie');
             categories.forEach((category) => {
-                activeIds.forEach((activeId) => {
+                activeCategories.forEach((activeId) => {
                     if (hasToBeNew) {
                         console.log('hasToBeNew');
                         if (category === activeId && isNew) {
@@ -375,7 +395,33 @@ const filterCards = () => {
             })
         }
 
-        if (activeAges.length > 0 && activeIds.length <= 0) {
+        if (activeCategories.length > 0 && activeAges.length <= 0) {
+            console.log('juste categorie');
+            categories.forEach((category) => {
+                activeCategories.forEach((activeId) => {
+                    if (hasToBeNew) {
+                        console.log('hasToBeNew');
+                        if (category === activeId && isNew) {
+                            campCard.classList.remove('hidden');
+                        }
+                    } else if (hasCollabo) {
+                        if (category === activeId && isCollabo) {
+                            campCard.classList.remove('hidden')
+                        }
+                    } else if (hasCollabo && hasToBeNew) {
+                        if (category === activeId && isCollabo && isNew) {
+                            campCard.classList.remove('hidden');
+                        }
+                    } else {
+                        if (category === activeId) {
+                            campCard.classList.remove('hidden');
+                        }
+                    }
+                });
+            })
+        }
+
+        if (activeAges.length > 0 && activeCategories.length <= 0) {
             console.log('juste age');
 
             ages.forEach((age) => {
@@ -403,11 +449,11 @@ const filterCards = () => {
             })
         }
 
-        if (activeIds.length > 0 && activeAges.length > 0) {
+        if (activeCategories.length > 0 && activeAges.length > 0) {
             console.log('les 2');
 
             categories.forEach((category) => {
-                activeIds.forEach((activeId) => {
+                activeCategories.forEach((activeId) => {
                     if (hasToBeNew) {
                         if (category === activeId && isNew) {
                             ages.forEach((age) => {
@@ -455,11 +501,11 @@ const filterCards = () => {
         }
     })
 
-    if (activeIds.length <= 0 && activeAges.length <= 0 && !hasToBeNew && !hasCollabo) {
+    if (activeCategories.length <= 0 && activeAges.length <= 0 && !hasToBeNew && !hasCollabo) {
         campCards.forEach((campCard) => {
             campCard.classList.remove('hidden');
         })
-    } else if (activeIds.length <= 0 && activeAges.length <= 0 && (hasToBeNew || hasCollabo)) {
+    } else if (activeCategories.length <= 0 && activeAges.length <= 0 && (hasToBeNew || hasCollabo)) {
         campCards.forEach((campCard) => {
             if (hasToBeNew && hasCollabo) {
                 if (campCard.getAttribute('data-new') === "1" && campCard.getAttribute('data-collabo') !== null) {
