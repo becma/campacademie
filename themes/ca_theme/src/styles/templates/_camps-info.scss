@@ -8,11 +8,12 @@
     &-content {
         display: flex;
         flex-direction: column;
+        padding: 15px;
 
-        @media #{$medium-plus} {
+        @media #{$large-plus} {
             flex-direction: row;
 
-            > div {
+            >div {
                 width: 50%;
             }
         }
@@ -31,7 +32,8 @@
                 margin: 15px auto;
                 width: 100%;
 
-                td, th {
+                td,
+                th {
                     padding: 0 20px;
                     font-size: 2rem;
                     font-weight: normal;
@@ -52,7 +54,8 @@
                     }
                 }
 
-                td:first-child, th:first-child {
+                td:first-child,
+                th:first-child {
                     border-right: 1px solid $mauve-ca;
                 }
 
@@ -72,9 +75,11 @@
                     margin: 0 auto;
 
                     select {
-                        -moz-appearance:none; /* Firefox */
-                        -webkit-appearance:none; /* Safari and Chrome */
-                        appearance:none;
+                        -moz-appearance: none;
+                        /* Firefox */
+                        -webkit-appearance: none;
+                        /* Safari and Chrome */
+                        appearance: none;
                         background: none;
                         border: 3px solid transparent;
                         border-bottom: 5px solid $vert-ca;
@@ -84,16 +89,16 @@
                         margin: 2px;
                         min-width: 350px;
                         z-index: 0;
-    
+
                         &:focus {
                             outline: 1px solid $mauve-ca;
                         }
-    
-                        &.active + .fa-solid {
+
+                        &.active+.fa-solid {
                             transform: rotate(180deg) translateY(50%);
                         }
                     }
-    
+
                     .fa-solid {
                         font-size: 2rem;
                         position: absolute;
@@ -111,7 +116,8 @@
                     text-align: center;
                     text-decoration: underline;
 
-                    &:hover, &:focus {
+                    &:hover,
+                    &:focus {
                         text-decoration: none;
                     }
 
@@ -134,7 +140,17 @@
 
         &-media {
             display: flex;
+            align-items: start;
             justify-content: center;
+
+            img {
+                display: block;
+                height: auto;
+                object-fit: contain;
+                // width: auto;
+                max-width: 100%;
+            }
+
         }
     }
 }

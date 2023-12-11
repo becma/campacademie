@@ -6,7 +6,7 @@
         'numberposts' => -1
     )) ;
 
-    $hasVideo = !empty(get_field('video_id'));
+    $hasVideo = (get_field('camp_hasVideo'));
     $ageLabel = !empty(get_field('age_label')) ? get_field('age_label') : get_field('age_label', $camps_global);
     $priceLabel = !empty(get_field('price_label')) ? get_field('price_label') : get_field('price_label', $camps_global);
     $ageMin = get_field('camp_age')['minimum'];
@@ -78,6 +78,9 @@
             <?php if ($hasVideo) {
                 $videoId = get_field('video_id');
                 echo "<iframe width='700' height='400' src='https://www.youtube.com/embed/$videoId' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+            } else {
+                $imgSrc = get_field('camp_image')['url'];
+                echo "<img src=\"$imgSrc\" />";
             }
             ?>
         </div>

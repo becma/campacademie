@@ -1,0 +1,133 @@
+.emploi-formulaire {
+    &-content {
+
+        h2 {
+            padding: 70px 0 40px;
+            text-align: center;
+        }
+
+        fieldset {
+            border: 3px solid $mauve-ca;
+            margin-bottom: 30px;
+
+            legend {
+                font-size: 3rem;
+            }
+        }
+
+        .choix-poste {
+            .wpcf7-form-control {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 0 1%;
+
+                @media #{$medium-plus} {
+                    flex-direction: row;
+                }
+            }
+
+            .wpcf7-not-valid-tip {
+                text-align: center;
+            }
+        }
+
+        .choix-site {
+            .wpcf7-form-control {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 0 30px;
+            }
+        }
+
+        .choix-poste,
+        .choix-site {
+            label {
+                display: flex;
+
+                span {
+                    padding-top: 2px;
+                }
+            }
+
+            input[type="checkbox"] {
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                -o-appearance: none;
+                background-color: white;
+                border: 1px solid $mauve-ca !important;
+                border-radius: 5px;
+                cursor: pointer;
+                height: 2rem;
+                margin-right: 5px;
+                position: relative;
+                width: 2rem;
+
+                &:checked {
+                    background-color: $mauve-ca;
+                }
+
+                &:focus {
+                    background-color: $vert-ca;
+                    outline: none;
+                }
+            }
+        }
+
+        .infos-base {
+
+            >p {
+                max-width: 700px;
+                margin: 0 auto;
+
+                label {
+                    display: block;
+                    width: 100%;
+
+                    span,
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+
+            input,
+            textarea {
+                background-color: white;
+                border: 1px solid $mauve-ca;
+                border-radius: 5px;
+                padding: 5px;
+
+                &:focus {
+                    background: $grey-ca;
+                    outline: none;
+                }
+            }
+
+            textarea {
+                width: 100%;
+            }
+        }
+
+        .cta.green {
+            background-color: $vert-ca !important;
+            border: none !important;
+            color: black !important;
+            cursor: pointer;
+            display: block;
+            font-size: 3rem !important;
+            max-width: 700px;
+            padding: 15px !important;
+            margin: 30px auto;
+            width: 60%;
+
+            &:hover,
+            &:focus {
+                background-color: $mauve-ca !important;
+                color: white !important;
+            }
+        }
+
+
+    }
+}

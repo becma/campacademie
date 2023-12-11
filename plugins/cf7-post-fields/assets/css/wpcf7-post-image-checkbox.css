@@ -1,0 +1,99 @@
+ul.wpcf7-post_image_checkbox,
+ul.wpcf7-post_image_radio {
+    list-style-type: none;
+    margin-left:0;
+}
+
+ul.wpcf7-post_image_checkbox > li.wpcf7-list-item,
+ul.wpcf7-post_image_radio > li.wpcf7-list-item {
+    list-style: none;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    width: 100%;
+}
+
+ul.wpcf7-post_image_checkbox > li.wpcf7-list-item > label,
+ul.wpcf7-post_image_radio > li.wpcf7-list-item > label {
+    display: table-cell;
+    vertical-align: top;
+}
+
+ul.wpcf7-post_image_checkbox > li.wpcf7-list-item > div.wpcf7-list-item-body,
+ul.wpcf7-post_image_radio > li.wpcf7-list-item > div.wpcf7-list-item-body {
+    display: table-cell;
+    vertical-align: top;
+}
+
+ul.wpcf7-post_image_checkbox > li.wpcf7-list-item::after,
+ul.wpcf7-post_image_radio > li.wpcf7-list-item::after {
+    content: '';
+    display: block;
+    clear:both;
+}
+
+ul.wpcf7-post_image_checkbox > li.wpcf7-list-item .wpcf7-list-item-label,
+ul.wpcf7-post_image_radio > li.wpcf7-list-item .wpcf7-list-item-label {
+    color: black;
+    font-weight: bold;
+    word-wrap: break-word;
+    margin-bottom: 4px;
+}
+
+ul.wpcf7-post_image_checkbox > li.wpcf7-list-item .wpcf7-list-item-excerpt,
+ul.wpcf7-post_image_radio > li.wpcf7-list-item .wpcf7-list-item-excerpt {
+    font-size: 13px;
+    color: #777;
+    margin-top: 4px;
+}
+
+ul.wpcf7-post_image_checkbox > li.wpcf7-list-item .wpcf7-list-item-meta-data > span.wpcf7-list-item-meta,
+ul.wpcf7-post_image_radio > li.wpcf7-list-item .wpcf7-list-item-meta-data > span.wpcf7-list-item-meta {
+    margin-right: 1em;
+    background-color: #aaa;
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+
+ul.wpcf7-post_image_checkbox > li.wpcf7-list-item > label > input,
+ul.wpcf7-post_image_radio > li.wpcf7-list-item > label > input {
+    display:none !important;
+}
+
+ul.wpcf7-post_image_checkbox > li.wpcf7-list-item > label.first,
+ul.wpcf7-post_image_radio > li.wpcf7-list-item > label.first {
+    float: right;
+}
+
+ul.wpcf7-post_image_checkbox > li.wpcf7-list-item > label.last,
+ul.wpcf7-post_image_radio > li.wpcf7-list-item > label.last {
+    float: left;
+}
+
+ul.wpcf7-post_image_checkbox > li.wpcf7-list-item > label > .wp-post-image,
+ul.wpcf7-post_image_radio > li.wpcf7-list-item > label > .wp-post-image {
+    margin-right: 10px;
+    box-sizing: content-box;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 2px;
+    position: relative;
+    white-space: nowrap;
+}
+
+ul.wpcf7-post_image_checkbox > li.wpcf7-list-item > label > input + .wp-post-image,
+ul.wpcf7-post_image_radio > li.wpcf7-list-item > label > input + .wp-post-image {
+    cursor: pointer;
+    border: 3px solid transparent;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.1);
+}
+
+ul.wpcf7-post_image_checkbox > li.wpcf7-list-item > label > input:checked + .wp-post-image,
+ul.wpcf7-post_image_radio > li.wpcf7-list-item > label > input:checked + .wp-post-image {
+    border: 3px solid #2991d6;
+}
