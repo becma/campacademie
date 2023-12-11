@@ -25,7 +25,7 @@
         }
     }
 
-    nav  {
+    nav {
         .nav-btn {
             @include button-reset;
             color: white;
@@ -41,7 +41,7 @@
             i {
                 display: none;
 
-                &.-active{
+                &.-active {
                     display: block;
                 }
             }
@@ -50,7 +50,8 @@
         .menu-header-container {
             height: 0;
             width: 100vw;
-            overflow: hidden;
+            // overflow-x: hidden;
+            // overflow-y: visible;
             position: relative;
             display: none;
 
@@ -76,22 +77,26 @@
             position: relative;
             z-index: 3;
 
-            @media #{$medium-plus} {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                position: static;
-                z-index: 0;
-            }
+            &:not(.sub-menu) {
+                @media #{$medium-plus} {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    position: static;
+                    z-index: 0;
+                }
 
-            @media #{$large-plus} {
-                justify-content: flex-end;
+                @media #{$large-plus} {
+                    justify-content: flex-end;
+                }
             }
 
             li {
+                background-color: white;
                 display: flex;
                 align-items: center;
                 padding: 15px;
+                position: relative;
                 font-size: 2rem;
 
                 @media #{$medium-plus} {
@@ -116,6 +121,44 @@
 
                     a {
                         color: black;
+                    }
+                }
+
+                .sub-menu {
+                    position: absolute;
+                    top: 70px;
+                    left: 0;
+                    background-color: white;
+                    height: auto;
+                    max-height: 0;
+                    transition: max-height 1s linear;
+                    overflow: hidden;
+
+                    & li {
+                        width: 100%;
+                        justify-content: flex-start;
+                        height: 70px;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            height: 100%;
+                            width: 95%;
+                            margin: 0 auto;
+                        }
+
+                        &:not(:last-child) {
+
+                            a {
+                                border-bottom: 1px solid $mauve-ca;
+                            }
+                        }
+                    }
+                }
+
+                &.active {
+                    .sub-menu {
+                        max-height: 500px;
                     }
                 }
             }
@@ -146,8 +189,8 @@
             left: 50px;
             transform: translateX(0%);
         }
-        
-        
+
+
         img {
             display: block;
             height: auto;

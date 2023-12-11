@@ -57,6 +57,21 @@ const getComputedStyles = (el) => {
     return window.getComputedStyle ? getComputedStyle(el, null) : el.currentStyle;
 }
 
+/************ DÉBUT SOUSNAV ************/
+
+const sousNavs = document.querySelectorAll('li:has(.sub-menu)');
+console.log(sousNavs);
+
+sousNavs.forEach((sousNav) => {
+    sousNav.addEventListener('click', (event) => {
+        if (event.currentTarget === sousNav) {
+            sousNav.classList.toggle('active');
+        }
+    })
+})
+
+
+
 /************ DÉBUT BECMA SLIDER ************/
 
 const becmaSliderHandler = (slidesToShow, slidesToScroll) => {
