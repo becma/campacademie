@@ -1,0 +1,110 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-11 13:25+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: modules/checkbox.php:308 modules/image-checkbox.php:382
+msgid "Generate a form-tag for a group of post checkboxes."
+msgstr ""
+
+#: modules/checkbox.php:310 modules/image-checkbox.php:384
+msgid "Generate a form-tag for a group of post radio buttons."
+msgstr ""
+
+#: modules/image-select.php:310
+msgid "Generate a form-tag for a posts image drop-down menu."
+msgstr ""
+
+#: modules/module.php:278
+msgid "Post type"
+msgstr ""
+
+#: modules/module.php:304
+msgctxt "post status"
+msgid "Inherit"
+msgstr ""
+
+#: modules/module.php:353
+msgid ""
+"Use pipe-separated term slugs (e.g. united-states|germany|austria) per field."
+msgstr ""
+
+#: modules/module.php:359
+msgid "Label format"
+msgstr ""
+
+#: modules/module.php:370
+msgid "Value field"
+msgstr ""
+
+#: modules/module.php:374
+msgid "Permalink"
+msgstr ""
+
+#: modules/module.php:387
+msgid "Inherit"
+msgstr ""
+
+#: modules/module.php:392
+msgid "Sort order"
+msgstr ""
+
+#: modules/module.php:412
+msgid "Number of posts"
+msgstr ""
+
+#: modules/module.php:417
+msgid "The number of posts to show in the field. Use -1 to show all posts."
+msgstr ""
+
+#: modules/select.php:217
+msgid "Generate a form-tag for a posts drop-down menu."
+msgstr ""
+
+#: modules/generators/image-checkbox.php:53
+#: modules/generators/image-select.php:51
+msgid "Excerpt Lenght"
+msgstr ""
+
+#: modules/generators/image-checkbox.php:58
+#: modules/generators/image-select.php:56
+msgid "Define the number of words for the excerpt. Default \"55\"."
+msgstr ""
+
+#: modules/generators/image-checkbox.php:69
+#: modules/generators/image-select.php:67
+#, php-format
+msgid "Use pipe-separated post attributes (e.g. %s|meta_key) per field."
+msgstr ""
+
+#: modules/generators/image-select.php:79
+msgid "Display a search box on the drop-down menu."
+msgstr ""
+
+#. Name of the plugin
+msgid "Contact Form 7 - Post Fields"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Provides a dynamic post select, radio and checkbox field to your CF7 forms."
+msgstr ""
+
+#. Author of the plugin
+msgid "Markus Froehlich"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "mailto:markusfroehlich01@gmail.com"
+msgstr ""

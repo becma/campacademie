@@ -1,0 +1,15 @@
+.cf7-post-fields-rating {
+	display: inline-block;
+	color: #ffb900;
+	position: relative;
+	top: 3px
+}
+
+.cf7-post-fields-rating svg,
+.cf7-post-fields-rating svg:hover {
+	fill: #ffb900
+}
+
+.cf7-post-fields-rating svg:hover~svg {
+	fill: none
+}
