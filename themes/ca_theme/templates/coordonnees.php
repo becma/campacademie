@@ -1,11 +1,13 @@
+<?php include get_template_directory() . '/global-info.php' ?>
+
 <?php
-    $tel1_label = get_field('tel1_label');
-    $tel1_num = get_field('tel1_num');
-    $tel2_label = get_field('tel2_label');
-    $tel2_num = get_field('tel2_num');
-    $courriel = get_field('courriel');
-    $horaire_label = get_field('horaire_label');
-    $horaire_heures = get_field('horaire_heures');
+    $tel1_label = get_field('tel1_label', $coordonnees);
+    $tel1_num = get_field('tel1_num', $coordonnees);
+    $tel2_label = get_field('tel2_label', $coordonnees);
+    $tel2_num = get_field('tel2_num', $coordonnees);
+    $courriel = get_field('courriel', $coordonnees);
+    $horaire_label = get_field('horaire_label', $coordonnees);
+    $horaire_heures = get_field('horaire_heures', $coordonnees);
 
     if(ctype_digit($tel1_num)) {
     $tel1_num_dashes = substr($tel1_num, 0, 3) .'-'.
