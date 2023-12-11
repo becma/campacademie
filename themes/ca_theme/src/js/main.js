@@ -15,7 +15,7 @@ const controlArrow = () => {
 
 const filterSites = (event) => {
 
-    cityBtnsDesk.forEach ((btn) => {
+    cityBtnsDesk.forEach((btn) => {
         btn.classList.remove('active');
     });
 
@@ -79,7 +79,7 @@ const becmaSliderHandler = (slidesToShow, slidesToScroll) => {
             biggestSlideWidth = slideWidth;
         }
 
-        if ( becmaSliderSlides.indexOf(slide) > -1 && becmaSliderSlides.indexOf(slide)  <= (slidesToShow -1) ) {
+        if (becmaSliderSlides.indexOf(slide) > -1 && becmaSliderSlides.indexOf(slide) <= (slidesToShow - 1)) {
             slide.classList.add('slide-active');
         }
     })
@@ -118,7 +118,7 @@ const becmaSetArrows = (slider, slidesToScroll) => {
         slider.prepend(leftArrowCont);
         becmaLeftArrow = slider.querySelector('.becma-arrow-left-btn');
     }
-  
+
     if (!becmaRightArrow) {
         let rightArrowCont = document.createElement('div');
         let rightArrow = document.createElement('button')
@@ -150,7 +150,7 @@ const becmaSetArrows = (slider, slidesToScroll) => {
                     prevSlideWidth = prevSlide.clientWidth + parseInt(prevSlideStyles.marginLeft) + parseInt(prevSlideStyles.marginRight);
                     transformVal += Math.abs(prevSlideWidth);
                     transform = "translateX(" + transformVal + "px)";
-                    activeSlides[activeSlides.length -1].classList.remove('slide-active');
+                    activeSlides[activeSlides.length - 1].classList.remove('slide-active');
                     prevSlide.classList.add('slide-active');
                 } else if (btnClass.contains('becma-arrow-right-btn')) {
                     activeSlides = slider.querySelectorAll('.becma-slides .slide-active');
@@ -169,7 +169,7 @@ const becmaSetArrows = (slider, slidesToScroll) => {
             });
         });
 
-            // TODO: Add slidetoscroll to slide-active class handling
+        // TODO: Add slidetoscroll to slide-active class handling
     }
 }
 
@@ -180,8 +180,8 @@ const handleArrowsVisibility = (becmaSlidesCont, becmaLeftArrow, becmaRightArrow
         becmaLeftArrow.classList.remove('arrow-disabled');
     }
 
-               
-    if (document.querySelectorAll('.slide-active')[document.querySelectorAll('.slide-active').length -1] === becmaSlidesCont.querySelectorAll('.becma-slide')[becmaSlidesCont.querySelectorAll('.becma-slide').length -1]) {
+
+    if (document.querySelectorAll('.slide-active')[document.querySelectorAll('.slide-active').length - 1] === becmaSlidesCont.querySelectorAll('.becma-slide')[becmaSlidesCont.querySelectorAll('.becma-slide').length - 1]) {
         becmaRightArrow.classList.add('arrow-disabled');
     } else {
         becmaRightArrow.classList.remove('arrow-disabled');
@@ -249,6 +249,42 @@ const handleFAQ = () => {
 }
 
 /************ FIN FAQ ************/
+
+/************ DÉBUT EMPLOI *************/
+
+const emploiBtns = document.querySelector('.emploi-card-content-cards');
+
+if (emploiBtns) {
+    const ben = document.querySelector('.emploi-card-content-benevole button');
+    const aideAni = emploiBtns.querySelector('.aide-animateur');
+    const ani = emploiBtns.querySelector('.animateur');
+    const dir = emploiBtns.querySelector('.directeur');
+    const form = document.querySelector('.emploi-formulaire');
+
+    const triggerScroll = (index) => {
+        const posteInputs = document.querySelectorAll('#poste input');
+        posteInputs[index].checked = true;
+        form.scrollIntoView({ behavior: "smooth" });
+    }
+
+    ben.addEventListener('click', () => {
+        triggerScroll(0);
+    })
+
+    aideAni.addEventListener('click', () => {
+        triggerScroll(1);
+    })
+
+    ani.addEventListener('click', () => {
+        triggerScroll(2);
+    })
+
+    dir.addEventListener('click', () => {
+        triggerScroll(3);
+    })
+}
+
+/************ FIN EMPLOI *************/
 
 navBtn.addEventListener('click', (event) => {
     openCloseMenu(event);
