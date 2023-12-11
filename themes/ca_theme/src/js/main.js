@@ -250,6 +250,42 @@ const handleFAQ = () => {
 
 /************ FIN FAQ ************/
 
+/************ DÉBUT EMPLOI *************/
+
+const emploiBtns = document.querySelector('.emploi-card-content-cards');
+
+if (emploiBtns) {
+    const ben = document.querySelector('.emploi-card-content-benevole button');
+    const aideAni = emploiBtns.querySelector('.aide-animateur');
+    const ani = emploiBtns.querySelector('.animateur');
+    const dir = emploiBtns.querySelector('.directeur');
+    const form = document.querySelector('.emploi-formulaire');
+
+    const triggerScroll = (index) => {
+        const posteInputs = document.querySelectorAll('#poste input');
+        posteInputs[index].checked = true;
+        form.scrollIntoView({ behavior: "smooth" });
+    }
+
+    ben.addEventListener('click', () => {
+        triggerScroll(0);
+    })
+
+    aideAni.addEventListener('click', () => {
+        triggerScroll(1);
+    })
+
+    ani.addEventListener('click', () => {
+        triggerScroll(2);
+    })
+
+    dir.addEventListener('click', () => {
+        triggerScroll(3);
+    })
+}
+
+/************ FIN EMPLOI *************/
+
 navBtn.addEventListener('click', (event) => {
     openCloseMenu(event);
 })
